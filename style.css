@@ -1,0 +1,166 @@
+body{
+    background-color: rgb(35, 35, 35);
+}
+
+h1{
+    color: rgb(255, 250, 109);
+     text-shadow: 0 0 20px yellow, 0 0 40px yellow;
+     text-align: center;
+}
+p{
+    color: aliceblue;
+    text-align: center;
+
+}
+
+.live{
+    left: 100px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+    box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    cursor: pointer;
+}
+
+.UpcomingEvents{
+     left: 620px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+
+.Process{
+    right: 100px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+.logo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100px;
+
+
+}
+
+.butlive{
+   left: 100px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    z-index: 1;
+    border-radius: 12px;
+   
+}
+
+.livephoto{
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+   border-radius: 12px;
+  cursor: pointer;
+}
+
+
+.butevent{
+    left: 620px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+
+.eventphoto{
+left: 0;
+    top: 0;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.butprocess{
+    right: 100px;
+    top: 300px;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+.processphoto{
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    background-color: rgb(136, 136, 136);
+  box-shadow: 0 0 20px rgb(255, 255, 255), 0 0 30px yellow;
+   border-radius: 12px;
+  cursor: pointer;
+}
+
+h2{
+   color: rgb(255, 250, 109);
+ text-shadow: 0 0 20px white
+}
+
+
+.h2live{
+    position: absolute;
+
+    top: 600px;
+    left: 220px;
+}
+
+
+.h2event{
+     position: absolute;
+
+    top: 600px;
+    left: 680px;
+}
+
+.h2process{
+     position: absolute;
+
+    top: 600px;
+    right: 200px;
+}
+
+
+
