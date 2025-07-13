@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>Bethel Church Limay - Live Stream</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Facebook SDK -->
   <div id="fb-root"></div>
   <script async defer crossorigin="anonymous"
     src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0"
     nonce="abc123">
   </script>
-  <!-- Styles -->
   <style>
     body {
       margin: 0;
@@ -32,7 +30,7 @@
     }
 
     header p {
-      margin: 0.5rem 0 0;
+      margin-top: 0.5rem;
       font-size: 1.1rem;
       font-weight: 300;
     }
@@ -52,6 +50,7 @@
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       background: white;
+      margin-bottom: 2rem;
     }
 
     .responsive-embed .fb-video {
@@ -60,6 +59,10 @@
       left: 0;
       width: 100%;
       height: 100%;
+    }
+
+    .fb-comments {
+      text-align: left;
     }
 
     footer {
@@ -77,11 +80,11 @@
 
   <header>
     <h1>Bethel Church Limay</h1>
-    <p>Live Worship Every Sunday – Experience God's Presence</p>
+    <p>Live Worship – Join Us in God's Presence</p>
   </header>
 
   <div class="container">
-    <h2>Live Worship Stream</h2>
+    <h2>Now Streaming</h2>
     <div class="responsive-embed">
       <div class="fb-video"
            data-href="https://www.facebook.com/BethelChurchLimayOfficial/videos/599732276517941"
@@ -90,10 +93,18 @@
            data-autoplay="true">
       </div>
     </div>
+
+    <!-- Facebook Comments Plugin -->
+    <h3>Join the Conversation</h3>
+    <div class="fb-comments"
+         data-href="https://www.facebook.com/BethelChurchLimayOfficial/videos/599732276517941"
+         data-width="100%"
+         data-numposts="5">
+    </div>
   </div>
 
   <footer>
-    &copy; 2025 Bethel Church Limay | All Rights Reserved
+    &copy; 2025 Bethel Church Limay. All Rights Reserved.
   </footer>
 
 </body>
