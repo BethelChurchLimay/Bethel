@@ -1,40 +1,42 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Bethel HomePage</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Bethel Church Limay</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bethel HomePage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Bethel Church Limay</h1>
+    <p>Welcome! This is where your content will go. Focus on design here.</p>
 
-<p>dito mapupunta yung mga word kahit anong word huhu(much more on design lang gagawin ko)</p>
+    <!-- Button Section -->
+    <div class="button-container">
+        <!-- Live Button -->
+        <div class="button-wrapper">
+            <button onclick="window.location.href='live.html'">
+                <img src="BETHEL LOGO DRAFT.jpg" alt="Live" />
+            </button>
+            <h2>Live</h2>
+        </div>
 
-<!--button na mapupunta sa ibang html file-->
-<!--left-->
-<button class="butlive" onclick="window.location.href='live.html'">
-    <img class="livephoto" src="BETHEL LOGO DRAFT.jpg" alt="">
-</button>
+        <!-- Events Button -->
+        <div class="button-wrapper">
+            <button onclick="window.location.href='events.html'">
+                <img src="PLAN 40.png" alt="Events" />
+            </button>
+            <h2>Upcoming Events</h2>
+        </div>
 
-<!--middle-->
-<button class="butevent" onclick="window.location.href='events.html'">
-    <img class="eventphoto" src="PLAN 40.png" alt="">
-</button>
+        <!-- Process Button -->
+        <div class="button-wrapper">
+            <button onclick="window.location.href='process.html'">
+                <img src="./images/process.jpg" alt="Process" />
+            </button>
+            <h2>Process</h2>
+        </div>
+    </div>
 
-<!--right-->
-<button class="butprocess" onclick="window.location.href='process.html'">
-    <img class="processphoto" src="./images/process.jpg" alt="">
-</button>
-
-<!--objects lang-->
-<div class="live"></div>
-<div class="UpcomingEvents"></div>
-<div class="Process"></div>
-
-<h2 class="h2live">Live</h2>
-<h2 class="h2event">Upcoming Events</h2>
-<h2 class="h2process">Process</h2>
-
-
-<img class="logo" src="./images/logo.jpg" alt="Philippine Bethelites Logo">
-    </body>
+    <!-- Logo in the corner -->
+    <img class="logo" src="./images/logo.jpg" alt="Philippine Bethelites Logo">
+</body>
 </html>
