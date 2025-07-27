@@ -9,7 +9,7 @@ body {
     min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
-/* Main background with gradient and layout */
+/* Main background */
 .full-page-background {
     background: url(website_background.png);
     background-size: cover;

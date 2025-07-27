@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Live | YourChurch</title>
+  <link rel="stylesheet" href="live.css"/>
+</head>
+<body>
+  <div class="live-container">
+    <div class="video-section">
+      <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBethelChurchLimayOfficial%2Fvideos%2F2102226796937297%2F&show_text=false&autoplay=true" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+    </div>
+
+    <div class="sidebar">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="chat">Chat</button>
+        <button class="tab-button" data-tab="pray">Pray</button>
+        <button class="tab-button" data-tab="schedule">Schedule</button>
+        <button class="tab-button" data-tab="notes">Notes</button>
+        <button class="tab-button" data-tab="bible">Bible</button>
+      </div>
+
+      <div class="tab-content active" id="chat">
+        <h2>Chat</h2>
+        <div class="content-box">Live chat goes here.</div>
+      </div>
+      <div class="tab-content" id="pray">
+        <h2>Pray</h2>
+        <div class="content-box">Prayer requests or forms.</div>
+      </div>
+      <div class="tab-content" id="schedule">
+        <h2>Schedule</h2>
+        <div class="content-box">Service times and events.</div>
+      </div>
+      <div class="tab-content" id="notes">
+        <h2>Notes</h2>
+        <div class="content-box">Message notes and fill-ins.</div>
+      </div>
+      <div class="tab-content" id="bible">
+        <h2>Bible</h2>
+        <div class="content-box">Embedded Bible or links.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll('.tab-button');
+    const tabs = document.querySelectorAll('.tab-content');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(btn => btn.classList.remove('active'));
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        button.classList.add('active');
+        document.getElementById(button.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>
