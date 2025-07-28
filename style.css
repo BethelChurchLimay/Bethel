@@ -40,29 +40,54 @@ html, body {
   height: auto;
 }
 
-/* Yellow Glowing Button at Bottom Center */
+/* Button Container */
 .button-container {
   position: absolute;
-  bottom: 350px;
+  bottom: 200px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
+/* Button styles */
 .yellow-outline-button {
-  padding: 20px 40px;
-  font-size: 20px;
-  color: #fff;
-  background: transparent;
-  border: 2px solid yellow;
-  border-radius: 5px;
+  position: relative;
+  width: 15rem; /* Adjusted for smaller screens first */
+  height: 4rem; /* Adjusted for smaller screens first */
+  border: none;
+  border-radius: 2rem;
   cursor: pointer;
-  transition: box-shadow 0.3s ease, color 0.3s ease;
+  background-color: transparent;
+  font-size: 1.50rem; /* Adjusted for smaller screens first */
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  /* Added box-shadow to transition for smooth glow */
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 10px;
+  /* Original box-shadow for general shadow, plus a yellow glow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 0, 0.8); /* Yellow glow added */
+  white-space: nowrap;
+  border: 2px solid rgb(255, 251, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.button-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Button hover effect */
 .yellow-outline-button:hover {
-  box-shadow: 0 0 20px yellow;
-  color: yellow;
+  background-color: rgb(255, 251, 0);
+  transform: translateY(-2px);
+  /* Adjusted box-shadow for hover to enhance glow */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 0, 1); /* Enhanced yellow glow on hover */
+  color: white;
 }
 
 /* Bottom Emblem and Caption */
