@@ -3,40 +3,108 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live | YourChurch</title>
+  <title>Live | Bethel Church</title>
   <link rel="stylesheet" href="live.css"/>
+        <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png">
+      <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://bethelchurch.site",
+  "logo": "https://bethelchurch.site/philippine_bethelites_emblem.png"
+}
+</script>
 </head>
 <body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="blackHeader">
+      <img class="logo" src="./bethel_logo.png" alt="Bethel Logo">
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
   <div class="live-container">
+    <!-- VIDEO -->
     <div class="video-section">
-        <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBethelChurchLimayOfficial%2Fvideos%2F210222679693729=%2F&show_text=false&autoplay=true" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+      <iframe 
+        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fdump.ko.ulit.648291%2Fvideos%2F24783676284572733&show_text=false&autoplay=true" 
+        frameborder="0" allowfullscreen 
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+      </iframe>
     </div>
 
+    <!-- SIDEBAR -->
     <div class="sidebar">
+      <!-- Tabs -->
       <div class="tabs">
         <button class="tab-button active" data-tab="chat">Chat</button>
         <button class="tab-button" data-tab="pray">Pray</button>
-        <button class="tab-button" data-tab="schedule">Schedule</button>
         <button class="tab-button" data-tab="notes">Notes</button>
         <button class="tab-button" data-tab="bible">Bible</button>
       </div>
 
+      <!-- Chat -->
       <div class="tab-content active" id="chat">
         <h2>Chat</h2>
         <div class="content-box">Live chat goes here.</div>
       </div>
+
+      <!-- Pray -->
       <div class="tab-content" id="pray">
         <h2>Pray</h2>
-        <div class="content-box">Prayer requests or forms.</div>
-      </div>
-      <div class="tab-content" id="schedule">
-        <h2>Schedule</h2>
-        <div class="content-box">Service times and events.</div>
-      </div>
+  <div class="prayer-box" id="openPrayerModal">
+    <div class="prayer-icon">📩</div>
+    <h3>Submit Prayer Request.</h3>
+    <p>Let us know how we can pray for you and our team will reach out via email with a prayer and helpful next steps.</p>
+  </div>
+</div>
+
+<!-- PRAYER MODAL -->
+<div class="modal-overlay" id="prayerModal">
+  <div class="modal-content">
+    <button class="close-btn" id="closePrayerModal">&times;</button>
+    <div class="modal-icon">🙏</div>
+    <h2>Submit Your Prayer Request.</h2>
+    <form class="prayer-form">
+      <input type="text" placeholder="Name*"  required>
+      <input type="email" placeholder="Email*" required>
+      <textarea placeholder="Message*" required></textarea>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+      <!-- Notes -->
       <div class="tab-content" id="notes">
         <h2>Notes</h2>
-        <div class="content-box">Message notes and fill-ins.</div>
+        <div id="notesToolbar">
+          <!-- Paragraph Menu -->
+          <div class="paragraph-dropdown">
+            <button id="paragraphBtn">P</button>
+            <div class="paragraph-options">
+              <button onclick="setParagraph('p')">Body</button>
+              <button onclick="setParagraph('h1')">Title</button>
+              <button onclick="setParagraph('h2')">Heading</button>
+              <button onclick="setParagraph('h3')">Subheading</button>
+              <button onclick="setParagraph('blockquote')">Quote</button>
+            </div>
+          </div>
+
+          <button onclick="execCmd('bold')"><b>B</b></button>
+          <button onclick="execCmd('italic')"><i>I</i></button>
+          <button onclick="execCmd('underline')"><u>U</u></button>
+          <button onclick="execCmd('insertUnorderedList')">•</button>
+          <button onclick="execCmd('insertOrderedList')">1.</button>
+          <button id="downloadBtn">Download PDF</button>
+        </div>
+
+        <div id="notesBox" contenteditable="true" data-placeholder="Start typing your notes here..."></div>
       </div>
+
+      <!-- Bible -->
       <div class="tab-content" id="bible">
         <h2>Bible</h2>
         <div class="content-box">Embedded Bible or links.</div>
@@ -44,19 +112,7 @@
     </div>
   </div>
 
-  <script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const tabs = document.querySelectorAll('.tab-content');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        buttons.forEach(btn => btn.classList.remove('active'));
-        tabs.forEach(tab => tab.classList.remove('active'));
-
-        button.classList.add('active');
-        document.getElementById(button.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script type="module" src="live.js"></script>
 </body>
 </html>

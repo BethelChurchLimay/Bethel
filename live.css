@@ -1,22 +1,48 @@
-/* live.css */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-}
-
-.live-container {
-  display: flex;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.video-section {
-  flex: 3;
-  background: #000;
+/* HEADER */
+.site-header {
+  width: 100%;
+}
+
+.blackHeader {
+  height: 100px;
+  background-image: url('./Page 2 Pictures/header_background.png');
+  background-size: cover;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+/* MAIN LAYOUT */
+.live-container {
+  flex: 1;
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+/* VIDEO */
+.video-section {
+  flex: 4;
+  background: #000;
 }
 
 .video-section iframe {
@@ -25,8 +51,9 @@ body {
   border: none;
 }
 
+/* SIDEBAR */
 .sidebar {
-  flex: 1;
+  flex: 1.2;
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -34,16 +61,15 @@ body {
   overflow: hidden;
 }
 
+/* TABS */
 .tabs {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   border-bottom: 1px solid #ddd;
   background-color: #f8f8f8;
 }
 
 .tab-button {
-  flex: 1 1 20%;
+  flex: 1;
   padding: 10px;
   background: none;
   border: none;
@@ -55,23 +81,262 @@ body {
 .tab-button:hover,
 .tab-button.active {
   background-color: #504d4d;
+  color: white;
 }
 
+/* TAB CONTENT */
 .tab-content {
   display: none;
   padding: 15px;
+  flex: 1;
   overflow-y: auto;
-  flex-grow: 1;
 }
 
 .tab-content.active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .content-box {
   background-color: #131111;
   padding: 10px;
   border-radius: 4px;
-  height: calc(100% - 40px);
+  color: white;
+  flex: 1;
   overflow-y: auto;
 }
+
+/* PRAYER */
+.prayer-box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  max-width: 400px;
+  margin: 30px auto;
+}
+
+.prayer-box:hover {
+  transform: scale(1.02);
+}
+
+.prayer-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.prayer-box h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.prayer-box p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* Modal Content */
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+  position: relative;
+  text-align: center;
+}
+
+.modal-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.modal-content h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Prayer Form */
+.prayer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.prayer-form input,
+.prayer-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.prayer-form textarea {
+  resize: none;
+  height: 100px;
+}
+.prayer-form label{
+  position: absolute;
+ left: 1rem;
+            top: 0.75rem;
+            color: #64748b; /* Gray label color */
+            pointer-events: none; /* Allows clicks to pass through to input */
+            transition: all 0.3s ease-in-out;
+            font-size: 1rem;
+            background-color: transparent;
+            padding: 0 0.25rem;
+}
+
+/* Submit Button */
+.submit-btn {
+  padding: 10px;
+  background: #504d4d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+/* NOTES */
+#notesToolbar {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+#notesToolbar button {
+  padding: 5px 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#notesToolbar button:hover {
+  background: #ddd;
+}
+
+/* Paragraph Dropdown */
+.paragraph-dropdown {
+  position: relative;
+}
+
+.paragraph-options {
+  display: none;
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+}
+
+.paragraph-dropdown:hover .paragraph-options {
+  display: block;
+}
+
+.paragraph-options button {
+  display: block;
+  width: 10px;
+  padding: 5px 10px;
+  border: none;
+  background: white;
+  text-align: left;
+}
+
+.paragraph-options button:hover {
+  background: #ddd;
+}
+
+/* Notes Box */
+#notesBox {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+#notesBox:empty:before {
+  content: attr(data-placeholder);
+  color: gray;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #28a745; /* green success */
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards, fadeOut 0.5s 3s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+

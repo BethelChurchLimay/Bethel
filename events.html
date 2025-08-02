@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bethel Church - Next Event</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="events.css">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="events-header">
+    <div class="header-left">
+      <img src="philippine_bethelites_emblem.png" alt="PBAG Logo" class="pbag-logo">
+    </div>
+    <div class="header-right">
+      <a href="https://www.facebook.com/BethelChurchLimayOfficial" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-square-youtube"></i></a>
+    </div>
+  </header>
+
+  <!-- MAIN EVENT -->
+  <section class="event-highlight">
+    <h1>UPCOMING EVENT</h1>
+   <div class="event-media">
+  <img src="Page 5 Pictures/big_day.png" alt="Big Day" />
+</div>
+
+    <div class="countdown" id="countdown">
+      Loading countdown...
+    </div>
+    
+    <p class="event-date">
+      📅 August 3, 2025 — 8:00 AM
+    </p>
+  </section>
+
+  <!-- JS for Countdown -->
+  <script>
+    function startCountdown(targetDate) {
+      const countdownEl = document.getElementById("countdown");
+
+      function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          countdownEl.innerHTML = "Event is happening now!";
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownEl.innerHTML = 
+          `<span>${days}d</span> : <span>${hours}h</span> : <span>${minutes}m</span> : <span>${seconds}s</span>`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    // Set your event date & time here
+    const eventDate = new Date("August 3, 2025 08:00:00").getTime();
+    startCountdown(eventDate);
+  </script>
+
+</body>
+</html>
