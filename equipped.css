@@ -1,0 +1,50 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  color: white;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Coming Soon Animation */
+.coming-soon {
+  font-size: 3rem;
+  letter-spacing: 5px;
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #fff, 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
+  100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff9900, 0 0 30px #ff9900; }
+}
+
+/* Go Back Button */
+.back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ffcc00;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.back-btn:hover {
+  background: #ff9900;
+  transform: scale(1.05);
+}
