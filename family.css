@@ -220,6 +220,13 @@ h1, h2, p {
   gap: 5px;
   font-size: 14px;
   justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.connect:hover {
+  transform: scale(1.1);
 }
 
 .connect img {
