@@ -50,7 +50,7 @@ body {
 }
 
 .event-media img {
-  width: 50%;
+  width: 100%;
   position: center;
   height: auto;
   border-radius: 10px; /* optional rounded corners */
