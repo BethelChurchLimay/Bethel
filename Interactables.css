@@ -148,7 +148,8 @@ h1 {
 
 /* Text under each button */
 .subtext {
-    font-size: 0.7rem; /* Adjusted for smaller screens first */
+    font-size: clamp(0.6rem, 2vw, 0.9rem);
+    white-space: nowrap;
     line-height: 1.4;
     color: white;
     margin-top: 5px;
