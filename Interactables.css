@@ -82,7 +82,9 @@ h1 {
     box-sizing: border-box;
     z-index: 2;
     position: relative;
+    right: 62px;  
     text-decoration: none;
+
 }
 
 /* Each button section */
@@ -97,6 +99,7 @@ h1 {
     min-width: 120px; /* A more absolute minimum width for very small screens */
     box-sizing: border-box;
     padding: 5px;
+   
 }
 
 /* Icon above each button */
@@ -235,16 +238,16 @@ h1 {
   top: 20px; /* adjust distance from top */
   left: 50%;
   transform: translateX(-50%);
-  max-width: 150px;
+  max-width: 250px;
   height: auto;
   z-index: 10;
 }
 
 /* Main title */
 h1 {
-    font-size: 1.6rem; /* Adjusted for smaller screens first */
+    font-size: 1rem; /* Adjusted for smaller screens first */
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: white;
     padding: 0 10px;
     max-width: 90%;
@@ -262,6 +265,8 @@ h1 {
   align-items: flex-start;  /* keep rows stacked cleanly */
   column-gap: 10px;  /* space left-right */
   row-gap: 15px;     /* space top-bottom */
+  position: relative;
+  left: 1px;
 }
 
 /* Each button section */
@@ -282,7 +287,7 @@ h1 {
 
 /* Icon above each button */
 .icon {
-    max-width: 50px;
+    max-width: 80px;
     height: auto;
     display: block;
 }

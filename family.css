@@ -290,3 +290,302 @@ h1, h2, p {
   transform: scale(1.2);
   color: gray;
 }
+
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
+@media (max-height: 768px) {
+
+/* ==========================
+   RESET STYLES
+   ========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Makes padding/border not affect total size */
+}
+
+.logo {
+  width: 270px;
+  height: auto;
+}
+
+/* ==========================
+   HERO SECTION
+   ========================== */
+.hero-section {
+  height: 300px;
+  width: auto;
+  overflow: hidden;
+}
+
+.hero-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the section without stretching */
+}
+
+/* ==========================
+   HEADER
+   ========================== */
+.site-header {
+  position: relative; /* Header not sticky */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.blackHeader {
+  height: 130px;
+  background-image: url('./Page 2 Pictures/header_background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================
+   MAIN CONTENT
+   ========================== */
+.main-content {
+  padding-left: 80px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background: white;
+  min-height: calc(86vh - 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between sections */
+}
+
+.main-content > *:last-child {
+  margin-bottom: 0; /* remove last section’s extra margin */
+}
+
+h1, h2, p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+}
+
+/* ==========================
+   SERVICES + LOCATION WRAPPER
+   ========================== */
+.services-location-wrapper {
+  display: flex; /* Services left, location right */
+  gap: 150px; /*Space between them*/
+  align-items: flex-start;
+}
+
+.services-side { width: 50%; }
+.location-side { width: 50%; }
+
+/* ---------- SERVICES ---------- */
+.services {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.services-images {
+  display: flex;
+  gap: 15px;
+}
+
+.services-images img {
+  flex: 1;  /* Still share space evenly */
+  max-height: 200px;  /* Limit height */
+  width: auto; /* Keep aspect ratio */
+  object-fit: contain; /* Show full image without cropping */
+  border-radius: 8px;
+}
+
+/* ---------- LOCATION ---------- */
+.location {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.location-section {
+  display: flex; /* Image left, details right */
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.church-front {
+  max-width: 425px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.location-details p {
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.arrow img {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+}
+
+.arrow .waze-link img {
+  height: 80px;
+  width: auto;
+}
+
+.waze-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.waze-link img {
+  height: 80px;
+  width: auto;
+  transition: transform 0.2s ease;
+}
+
+.waze-link img:hover {
+  transform: scale(1.2);
+}
+
+/* ==========================
+   PASTORS SECTION
+   ========================== */
+/* Wrapper for title + pastors in one row */
+.pastors-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Title styling */
+.Pastors {
+  font-size: 100px;
+  margin-top: 80px;
+  white-space: nowrap;
+  padding-right: 60px;
+}
+
+/* Pastor cards grid inside the wrapper */
+.pastors-section {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+/* Individual pastor card */
+.pastor-card {
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+  transition: transform 0.2s ease;
+}
+
+.pastor-card:hover {
+  transform: scale(1.25);
+}
+
+.pastor-card img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.pastor-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.connect {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  justify-content: center;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.connect:hover {
+  transform: scale(1.1);
+}
+
+.connect img {
+  height: 24px;
+  width: 24px;
+  object-fit: contain;
+}
+
+/* ==========================
+   FOOTER
+   ========================== */
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+/* Left Footer */
+.footer-left {
+  background-image: url('./Page 2 Pictures/header_background.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 75%;
+  height: 100%;
+  gap: 10px;
+  color: white;
+}
+
+.footer-left .pbag-logo {
+  height: 90px;
+}
+
+.footer-left span {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Right Footer */
+.footer-right {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  background: white;
+}
+
+.footer-right i {
+  font-size: 100px;
+  color: black;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-right i:hover {
+  transform: scale(1.2);
+  color: gray;
+}
+}

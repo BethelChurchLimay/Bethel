@@ -19,6 +19,10 @@ body {
   padding: 15px 30px;
 }
 
+.red{
+  border-radius: none;
+}
+
 .header-left .pbag-logo {
   height: 80px;
 }
