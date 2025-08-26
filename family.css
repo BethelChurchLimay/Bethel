@@ -21,6 +21,10 @@
   overflow: hidden;
 }
 
+.hero-mobile {
+  display: none;
+}
+
 .hero-section img {
   width: 100%;
   height: 100%;
@@ -314,12 +318,17 @@ h1, h2, p {
    HERO SECTION
    ========================== */
 .hero-section {
-  height: 300px;
-  width: auto;
+  display: none;
+}
+
+.hero-mobile {
+  display: block; /* Show mobile hero */
+  height: 100vh; /* Full screen height */
+  width: 100%;
   overflow: hidden;
 }
 
-.hero-section img {
+.hero-mobile img {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Cover the section without stretching */

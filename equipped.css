@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #1a1a1a, #333);
+  background: url('Page 3 Pictures/enrollment_background.png') no-repeat center center fixed  ;
   color: white;
   height: 100vh;
   display: flex;
@@ -15,36 +15,73 @@ body {
   align-items: center;
 }
 
-.container {
-  text-align: center;
+.enroll_header img {
+  max-height: 180px;
+  width: auto;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
 }
 
-/* Coming Soon Animation */
-.coming-soon {
-  font-size: 3rem;
-  letter-spacing: 5px;
-  animation: glow 1.5s infinite alternate;
+.lclogo {
+  position: absolute;
+  z-index: 1000;
+  top: 250px;
+  left: 500px;
 }
 
-@keyframes glow {
-  0% { text-shadow: 0 0 5px #fff, 0 0 10px #ffcc00, 0 0 20px #ffcc00; }
-  100% { text-shadow: 0 0 10px #fff, 0 0 20px #ff9900, 0 0 30px #ff9900; }
+.lclogo img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: auto;
 }
 
-/* Go Back Button */
-.back-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #ffcc00;
-  color: black;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s, transform 0.2s;
+.lclogo p {
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: -10px;
+  white-space: nowrap;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+} 
+
+.destinylogo {
+  position: absolute;
+  z-index: 1000;
+  top: 250px;
+  right: 500px;
 }
 
-.back-btn:hover {
-  background: #ff9900;
-  transform: scale(1.05);
+.destinylogo img {
+  width: auto;
+  height: auto;
+  max-width: 300px;
+  max-height: auto;
+}
+
+.destinylogo p {
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  right: -160px;
+  white-space: nowrap;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+} 
+
+.emblem {
+    max-width: 100px; /* Adjusted for smaller screens first */
+    height: auto;
+}
+
+.bottom-section {
+    font-size: 0.75rem; /* Adjusted for smaller screens first */
+    color: rgb(0, 0, 0);
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+    position: absolute;
+    top: 750px;
 }
