@@ -30,6 +30,14 @@ body {
   z-index: 1000;
   top: 250px;
   left: 500px;
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+  transition: transform 0.2s ease;
+}
+
+.lclogo:hover {
+  transform: scale(1.1);
 }
 
 .lclogo img {
@@ -53,6 +61,14 @@ body {
   z-index: 1000;
   top: 250px;
   right: 500px;
+  text-align: center;
+  flex: 1;
+  min-width: 180px;
+  transition: transform 0.2s ease;
+}
+
+.destinylogo:hover {
+  transform: scale(1.1);
 }
 
 .destinylogo img {
@@ -84,4 +100,67 @@ body {
     padding: 0 10px;
     position: absolute;
     top: 750px;
+}
+
+@media (max-height: 768px) {
+body {
+  background: url("Page 3 Pictures/mobile_engage.png") no-repeat center center;
+  background-size: cover;   /* makes image cover the entire screen */
+  width: 100%;
+  height: 100vh;            /* full viewport height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* content starts from the top */
+  padding-top: 100px;          /* adjust so logo + content don’t overlap top */
+  color: white;
+  position: relative;
+}
+
+    .enroll_header img {
+        position: center;
+        max-height: 100px;
+        top: 20px;
+        left: 190px;
+    }
+
+    .lclogo {
+        top: 160px;
+        left: 100px;
+    }
+
+    .lclogo img {
+        max-width: 160px;
+    }
+
+    .lclogo p {
+        font-size: 40px;
+        position: absolute;
+        left: 10px;
+    }
+
+    .destinylogo {
+        position: absolute;
+        top: 400px;
+        left: 100px;
+    }
+
+    .destinylogo img {
+        max-width: 160px;
+    }
+
+    .destinylogo p {
+        font-size: 40px;
+        position: absolute;
+        left: 10px;
+    }
+
+    .emblem {
+        max-width: 70px;
+    }
+
+    .bottom-section {
+        font-size: 0.6rem;
+        top: 630px;
+    }
 }
