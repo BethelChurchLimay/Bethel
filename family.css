@@ -359,7 +359,7 @@ h1, h2, p {
    MAIN CONTENT
    ========================== */
 .main-content {
-  padding-left: 80px;
+  padding-left: 0px;
   padding-top: 1px;
   padding-bottom: 1px;
   background: white;
@@ -378,64 +378,72 @@ h1, h2, p {
   color: black;
 }
 
-/* ==========================
-   SERVICES + LOCATION WRAPPER
-   ========================== */
 .services-location-wrapper {
-  display: flex; /* Services left, location right */
-  gap: 150px; /*Space between them*/
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.services-side { width: 50%; }
-.location-side { width: 50%; }
+.services-side,
+.location-side {
+  width: 100%;
+}
 
 /* ---------- SERVICES ---------- */
 .services {
-  font-size: 50px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-left: 125px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .services-images {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
 .services-images img {
-  flex: 1;  /* Still share space evenly */
-  max-height: 200px;  /* Limit height */
-  width: auto; /* Keep aspect ratio */
-  object-fit: contain; /* Show full image without cropping */
+  width: 100%;
+  max-height: 120px;
+  object-fit: contain;
   border-radius: 8px;
+}
+
+.services-images img:first-child {
+  grid-column: span 2;
 }
 
 /* ---------- LOCATION ---------- */
 .location {
-  font-size: 50px;
+  font-size: 30px;
+  margin-left: 125px;
+  margin-top: 0px;
   margin-bottom: 20px;
 }
 
 .location-section {
-  display: flex; /* Image left, details right */
-  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 
 .church-front {
-  max-width: 425px;
+  max-width: 100%;
   height: auto;
   border-radius: 8px;
 }
 
 .location-details {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .location-details p {
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.4;
 }
 
@@ -492,64 +500,60 @@ h1, h2, p {
 }
 
 /* Pastor cards grid inside the wrapper */
+.pastors-wrapper {
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.Pastors {
+  font-size: 70px;
+  margin-top: 20px;
+  padding-right: 0;
+}
+
 .pastors-section {
-  display: flex;
-  gap: 80px;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  justify-items: center;
+  margin-bottom: 50px;
 }
 
-/* Individual pastor card */
 .pastor-card {
-  text-align: center;
-  flex: 1;
-  min-width: 180px;
-  transition: transform 0.2s ease;
-}
-
-.pastor-card:hover {
-  transform: scale(1.25);
+  width: 45%;
+  min-width: 120px;
 }
 
 .pastor-card img {
-  width: 200px;
-  height: auto;
+  width: 120px;
   border-radius: 8px;
 }
 
 .pastor-name {
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .connect {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 14px;
-  justify-content: center;
-  text-decoration: none;
-  color: inherit;
-  transition: transform 0.2s ease;
-}
-
-.connect:hover {
-  transform: scale(1.1);
+  font-size: 12px;
+  gap: 3px;
 }
 
 .connect img {
-  height: 24px;
-  width: 24px;
-  object-fit: contain;
+  height: 18px;
+  width: 18px;
 }
 
 /* ==========================
-   FOOTER
+   FOOTER (Mobile)
    ========================== */
 .site-footer {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* align everything to the left */
   align-items: center;
-  height: 100px;
+  gap: 20px; /* add controlled spacing */
+  height: 70px;
 }
 
 /* Left Footer */
@@ -559,42 +563,43 @@ h1, h2, p {
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 0 20px;
-  width: 75%;
+  padding: 0 10px;
+  width: 50%; /* more space for text */
   height: 100%;
-  gap: 10px;
+  gap: 8px;
   color: white;
 }
 
 .footer-left .pbag-logo {
-  height: 90px;
+  height: 35px; /* smaller logo */
 }
 
 .footer-left span {
-  font-size: 30px;
+  font-size: 9px; /* smaller text */
   font-weight: bold;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 
 /* Right Footer */
 .footer-right {
   display: flex;
-  gap: 20px;
+  gap: 12px;
   justify-content: center;
   align-items: center;
-  width: 25%;
+  width: 30%; /* more balanced */
   height: 100%;
+  margin-left: 20px;
   background: white;
 }
 
 .footer-right i {
-  font-size: 100px;
+  font-size: 32px; /* smaller icons */
   color: black;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .footer-right i:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: gray;
 }
 }
