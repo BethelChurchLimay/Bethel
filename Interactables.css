@@ -9,48 +9,58 @@ body {
     min-height: 100vh; /* Ensure body takes full viewport height */
 }
 
-/* Main background */
 .full-page-background {
-    background: url(website_background.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
     margin: 0;
     min-height: 100vh;
     width: 100vw;
+
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     text-align: center;
+
     color: white;
     padding: 30px 15px;
     box-sizing: border-box;
-    position: relative; /* Needed for overlay positioning */
+
+    position: relative; /* Allows absolutely positioned children */
 }
 
-/* Transparent overlay behind content */
-.transparent-overlay {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(104, 101, 101, 0.5); /* 20% opacity */
-    border-radius: 20px;
-    z-index: 1;
-    width: 90%; /* Start with a percentage for better small-screen fit */
-    max-width: 1700px; /* Maximum width for very large screens */
-    height: calc(100% - 200px);
-    max-height: 600px;
+.full-page-background {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* The two overlay backgrounds */
+.bg-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 0; /* Behind your content */
+}
+
+/* The visible slide */
+.bg-slide.visible {
+  opacity: 1;
 }
 
 /* Logo at the top */
 .bethel-logo {
-    max-width: 200px; /* Adjusted for smaller screens first */
+    max-width: 800px;
+    width: 100%;
     height: auto;
     margin-bottom: 20px;
-    z-index: 2;
+    display: block;
+    margin-left: 50px;
+    margin-right: auto;
+    text-align: left;
     position: relative;
+    z-index: 3;
 }
 
 /* Main title */
@@ -74,7 +84,7 @@ h1 {
     flex-wrap: nowrap; /* As per your original intention */
     justify-content: space-around;
     align-items: flex-start;
-    gap: 200px;
+    gap: 180px;
     margin-bottom: auto; /* Pushes content to the bottom */
     width: 100%;
     max-width: 1300px;
@@ -98,13 +108,14 @@ h1 {
     flex-basis: 0; /* Distributes space more evenly when growing/shrinking */
     min-width: 120px; /* A more absolute minimum width for very small screens */
     box-sizing: border-box;
-    padding: 5px;
+    padding: 5px;   
    
 }
 
 /* Icon above each button */
 .icon {
-    max-width: 250px; /* Adjusted for smaller screens first */
+    max-width: 280px; /* Adjusted for smaller screens first */
+    border-radius: 50px;
     height: auto;
     display: block;
     margin-bottom: 5px;
@@ -113,7 +124,7 @@ h1 {
 /* Button styles */
 .btn {
     position: relative;
-    width: 8rem; /* Adjusted for smaller screens first */
+    width: 9rem; /* Adjusted for smaller screens first */
     height: 2.5rem; /* Adjusted for smaller screens first */
     border: none;
     border-radius: 2rem;
@@ -185,7 +196,7 @@ h1 {
 
 /* Small emblem/logo in footer */
 .emblem {
-    max-width: 100px; /* Adjusted for smaller screens first */
+    max-width: 70px; /* Adjusted for smaller screens first */
     height: auto;
 }
 
@@ -195,179 +206,4 @@ h1 {
     margin: 0;
     text-align: center;
     padding: 0 10px;
-}
-
-/* PHONE DISPLAY */
-/* PHONE DISPLAY */
-/* PHONE DISPLAY */
-
-@media (max-height: 768px) {
-/* Main background */
-.full-page-background {
-  background: url("mobile_background.png") no-repeat center center;
-  background-size: cover;   /* makes image cover the entire screen */
-  width: 100%;
-  height: 100vh;            /* full viewport height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* content starts from the top */
-  padding-top: 100px;          /* adjust so logo + content don’t overlap top */
-  color: white;
-  position: relative;
-}
-
-/* Transparent overlay behind content */
-.transparent-overlay {
-    position: absolute;
-    top: 47%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(104, 101, 101, 0.5); /* 20% opacity */
-    border-radius: 20px;
-    z-index: 1;
-    width: 90%; /* Start with a percentage for better small-screen fit */
-    max-width: 1700px; /* Maximum width for very large screens */
-    height: calc(100% - 200px);
-    max-height: 500px;
-}
-
-/* Logo at the top */
-.bethel-logo {
-  position: absolute;
-  top: 20px; /* adjust distance from top */
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 250px;
-  height: auto;
-  z-index: 10;
-}
-
-/* Main title */
-h1 {
-    font-size: 1rem; /* Adjusted for smaller screens first */
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: white;
-    padding: 0 10px;
-    max-width: 90%;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    line-height: 1.2; /* Improve readability for multi-line titles */
-}
-
-/* Row of buttons at the top */
-.button-row-top {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;  /* keep rows stacked cleanly */
-  column-gap: 10px;  /* space left-right */
-  row-gap: 15px;     /* space top-bottom */
-  position: relative;
-  left: 1px;
-}
-
-/* Each button section */
-.update-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1px;
-  flex: 0 1 40%;
-  max-width: 120px;
-}
-
-.button-row-top .update-section:last-child {
-    flex: 0 1 100%; /* full width */
-    display: flex;
-    justify-content: center;
-}
-
-/* Icon above each button */
-.icon {
-    max-width: 80px;
-    height: auto;
-    display: block;
-}
-
-/* Button styles */
-.btn {
-    position: relative;
-    width: 80px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 8px;
-    font-weight: 600;
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    padding: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: transparent;
-    border: 2px solid rgb(197, 0, 79);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    margin: 0;  /* remove the bottom margin */
-}
-
-.btn::before {
-    content: none; /* Keep this if you don't use pseudo-elements for effects */
-
-}
-
-/* Button hover effect */
-.btn:hover {
-    background-color: rgb(197, 0, 79); /* Use the border color for hover background */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    color: white; /* Keep text white on hover */
-}
-
-/* Text under each button */
-.subtext {
-    font-size: 8px;
-    line-height: 1.2;
-    color: white;
-    margin: 0;
-    text-align: center;
-    max-width: 90%;
-    min-height: unset;
-}
-
-/* Bottom section (footer) */
-.bottom-section {
-    margin-top: auto; /* Pushes content to the bottom */
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    z-index: 2;
-    position: relative;
-}
-
-/* Remove underline from links inside button row */
-.button-row-top a {
-    text-decoration: none;
-}
-
-/* Small emblem/logo in footer */
-.emblem {
-    max-width: 50px; /* Adjusted for smaller screens first */
-    height: auto;
-}
-
-.bottom-section p {
-    font-size: 10px; /* Adjusted for smaller screens first */
-    color: white;
-    margin: 0;
-    text-align: center;
-    padding: 0 10px;
-}
 }
