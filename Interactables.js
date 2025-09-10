@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const images = [
-    'Interactables/Interactable_bg1.png',
-    'Interactables/Interactable_bg2.png',
-    'Interactables/Interactable_bg3.png',
-    'Interactables/Interactable_bg4.png'
+    'Interactables Pictures/Interactable_bg1.png',
+    'Interactables Pictures/Interactable_bg2.png',
+    'Interactables Pictures/Interactable_bg3.png',
+    'Interactables Pictures/Interactable_bg4.png'
   ];
 
   const slide1 = document.querySelector('.bg-slide-1');
