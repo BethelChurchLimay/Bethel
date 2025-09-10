@@ -207,3 +207,217 @@ h1 {
     text-align: center;
     padding: 0 10px;
 }
+
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
+
+@media (max-width: 647px) {
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    min-height: 100vh; /* Ensure body takes full viewport height */
+}
+
+.full-page-background {
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    position: relative; /* Allows absolutely positioned children */
+}
+
+.full-page-background {
+  position: relative;
+  overflow: hidden;
+  background-color: #000;
+}
+
+/* The two overlay backgrounds */
+.bg-slide {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  z-index: 0; /* Behind your content */
+}
+
+/* The visible slide */
+.bg-slide.visible {
+  opacity: 1;
+}
+
+/* Logo at the top */
+.bethel-logo {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 300px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+}
+
+/* Main title */
+h1 {
+    font-size: 1.2rem; /* Adjusted for smaller screens first */
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: white;
+    padding: 0 10px;
+    max-width: 90%;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    line-height: 1.1; /* Improve readability for multi-line titles */
+}
+
+/* Row of buttons at the top */
+.button-row-top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* As per your original intention */
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 0px;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 5px;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+    right: 30px;  
+    text-decoration: none;
+
+}
+
+/* Each button section */
+.update-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 1; /* Allows items to shrink */
+    flex-grow: 1; /* Allows items to grow */
+    flex-basis: 0; /* Distributes space more evenly when growing/shrinking */
+    min-width: 90px; /* A more absolute minimum width for very small screens */
+    box-sizing: border-box;
+    padding: 3px;   
+   
+}
+
+/* Icon above each button */
+.icon {
+    max-width: 60px; /* Adjusted for smaller screens first */
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    margin-bottom: 0px;
+}
+
+/* Button styles */
+.btn {
+    position: relative;
+    width: 3rem; /* Adjusted for smaller screens first */
+    height: 0.5rem; /* Adjusted for smaller screens first */
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    background-color: white;
+    font-size: 0.1rem; /* Adjusted for smaller screens first */
+    font-weight: 600;
+    color: white; /* Changed to white as per your new style */
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    padding: 0 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
+    background: transparent;
+    border: 2px solid rgb(197, 0, 79);
+    display: flex; /* Use flex to center text vertically if needed */
+    justify-content: center;
+    align-items: center;
+    text-decoration: none; /*no underline*/
+}
+
+.btn::before {
+    content: none; /* Keep this if you don't use pseudo-elements for effects */
+
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: rgb(197, 0, 79); /* Use the border color for hover background */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    color: white; /* Keep text white on hover */
+}
+
+/* Text under each button */
+.subtext {
+    font-size: clamp(0.2rem, 2vw, 0.4rem);
+    white-space: nowrap;
+    line-height: 1.4;
+    color: white;
+    margin-top: 2px;
+    min-height: auto; /* Adjusted for smaller screens first */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* Bottom section (footer) */
+.bottom-section {
+    margin-top: auto; /* Pushes content to the bottom */
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+/* Remove underline from links inside button row */
+.button-row-top a {
+    text-decoration: none;
+}
+
+/* Small emblem/logo in footer */
+.emblem {
+    max-width: 70px; /* Adjusted for smaller screens first */
+    height: auto;
+}
+
+.bottom-section p {
+    font-size: 0.75rem; /* Adjusted for smaller screens first */
+    color: white;
+    margin: 0;
+    text-align: center;
+    padding: 0 10px;
+}
+
+}
