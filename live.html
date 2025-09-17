@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Live | Bethel Church</title>
+  <title>Live | Bethel Church (UPDATED)</title>
   <link rel="stylesheet" href="live.css"/>
         <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png">
       <script type="application/ld+json">
@@ -29,13 +29,18 @@
   <!-- MAIN CONTENT -->
   <div class="live-container">
     <!-- VIDEO -->
-    <div class="video-section">
-      <iframe 
-        src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBethelChurchLimayOfficial%2Fvideos%790809969993387&show_text=false&autoplay=true" 
-        frameborder="0" allowfullscreen 
-        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
-      </iframe>
-    </div>
+<div class="video-section">
+  <iframe
+    src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FBethelChurchLimayOfficial%2Fvideos%2F4687174004842245&show_text=false&autoplay=true"
+    width="100%"
+    height="100%"
+    style="border:none;overflow:hidden"
+    scrolling="no"
+    frameborder="0"
+    allowfullscreen="true"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+  </iframe>
+</div>
 
     <!-- SIDEBAR -->
     <div class="sidebar">
@@ -47,11 +52,17 @@
         <button class="tab-button" data-tab="bible">Bible</button>
       </div>
 
-      <!-- Chat -->
-      <div class="tab-content active" id="chat">
-        <h2>Chat</h2>
-        <div class="content-box">Live chat goes here.</div>
-      </div>
+<!-- Chat -->
+<div class="tab-content active" id="chat">
+  <h2>Chat</h2>
+  <div class="content-box">
+    <div class="fb-comments" 
+         data-href="https://www.facebook.com/BethelChurchLimayOfficial/videos/4687174004842245/"
+         data-width="100%" 
+         data-numposts="8">
+    </div>
+  </div>
+</div>
 
       <!-- Pray -->
       <div class="tab-content" id="pray">
@@ -105,15 +116,20 @@
         <div id="notesBox" contenteditable="true" data-placeholder="Start typing your notes here..."></div>
       </div>
 
-      <!-- Bible -->
-      <div class="tab-content" id="bible">
-        <h2>Bible</h2>
-        <div class="content-box">Embedded Bible or links.</div>
-      </div>
+ <!-- Bible -->
+  <div class="tab-content" id="bible">
+    <div class="bible-box">
+    <iframe src="https://www.bible.com/bible/114/GEN.1.NKJV"></iframe>
     </div>
+  </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script type="module" src="live.js"></script>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" 
+  src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0">
+</script>
 </body>
 </html>
