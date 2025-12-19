@@ -26,7 +26,7 @@ body {
 
     position: relative; /* Allows absolutely positioned children */
 }
-
+    
 .full-page-background {
   position: relative;
   overflow: hidden;
@@ -121,9 +121,28 @@ h1 {
     margin-bottom: 5px;
 }
 
+.icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
+    cursor: pointer; /* show pointer on hover */
+}
+
+/* Hover effect */
+.icon:hover {
+    transform: scale(1.1); /* make it slightly bigger */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+
+.update-section a {
+    display: flex;
+    flex-direction: column; /* stack icon + button vertically */
+    align-items: center;    /* center horizontally */
+    text-decoration: none;  /* remove underline */
+}
+
 /* Button styles */
 .btn {
     position: relative;
+    margin-top: 10px;
     width: 9rem; /* Adjusted for smaller screens first */
     height: 2.5rem; /* Adjusted for smaller screens first */
     border: none;
@@ -131,7 +150,7 @@ h1 {
     cursor: pointer;
     background-color: white;
     font-size: 0.85rem; /* Adjusted for smaller screens first */
-    font-weight: 600;
+    font-weight: 600;   
     color: white; /* Changed to white as per your new style */
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5px;
@@ -263,7 +282,7 @@ body {
 
 /* Logo at the top */
 .bethel-logo {
-    max-width: 300px;
+    max-width: 1000px;
     width: 100%;
     height: auto;
     margin-bottom: 20px;
@@ -291,23 +310,12 @@ h1 {
 }
 
 /* Row of buttons at the top */
-.button-row-top {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* As per your original intention */
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 0px;
-    width: 100%;
-    max-width: 500px;
-    padding: 0 5px;
-    box-sizing: border-box;
-    z-index: 2;
-    position: relative;
-    right: 30px;  
-    text-decoration: none;
-
-}
+    .button-row-top {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        right: 0; /* remove offset */
+    }
 
 /* Each button section */
 .update-section {
@@ -326,7 +334,7 @@ h1 {
 
 /* Icon above each button */
 .icon {
-    max-width: 60px; /* Adjusted for smaller screens first */
+    max-width: 80px; /* Adjusted for smaller screens first */
     border-radius: 10px;
     height: auto;
     display: block;
@@ -357,6 +365,7 @@ h1 {
     justify-content: center;
     align-items: center;
     text-decoration: none; /*no underline*/
+    display: none;
 }
 
 .btn::before {
@@ -374,7 +383,7 @@ h1 {
 
 /* Text under each button */
 .subtext {
-    font-size: clamp(0.2rem, 2vw, 0.4rem);
+    font-size: 9px;
     white-space: nowrap;
     line-height: 1.4;
     color: white;

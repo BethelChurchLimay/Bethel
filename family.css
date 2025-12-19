@@ -12,6 +12,17 @@
   height: auto;
 }
 
+.logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
+    cursor: pointer; /* show pointer on hover */
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.1); /* make it slightly bigger */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+
 /* ==========================
    HERO SECTION
    ========================== */
@@ -227,6 +238,14 @@ h1, h2, p {
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease;
+
+  /* Font changes */
+  font-family: 'Norwester', sans-serif; /* Make sure you imported it */
+  font-weight: 700; /* Bold */
+  color: rgb(111, 169, 236);
+  
+  /* Text shadow */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* x-offset, y-offset, blur, color */
 }
 
 .connect:hover {

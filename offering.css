@@ -28,6 +28,17 @@ body {
   cursor: pointer; /* Makes it obvious it's clickable */
 }
 
+.logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
+    cursor: pointer; /* show pointer on hover */
+}
+
+/* Hover effect */
+.logo:hover {
+    transform: scale(1.1); /* make it slightly bigger */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+
 .blackHeader a {
   display: flex;
   justify-content: center;

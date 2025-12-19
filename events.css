@@ -27,6 +27,17 @@ body {
   height: 80px;
 }
 
+.header-left .pbag-logo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
+    cursor: pointer; /* show pointer on hover */
+}
+
+/* Hover effect */
+.header-left .pbag-logo:hover {
+    transform: scale(1.1); /* make it slightly bigger */
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+}
+
 .header-right {
   display: flex;
   gap: 15px;
