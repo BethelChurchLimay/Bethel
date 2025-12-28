@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Offering | Bethel Church</title>
-  <link rel="stylesheet" href="offering.css" />
+  <title>Live | Bethel Church</title>
+  <link rel="stylesheet" href="live.css" />
   <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png" />
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
 </head>
 <body>
 
@@ -17,6 +21,22 @@
       </a>
     </div>
   </header>
+
+  <!-- FACEBOOK -->
+  <facebook class="content">
+  <section class="left-section">
+    <img src="Page 1 Pictures/fbprofile.png" class="fbprofile" alt="FB Profile">
+    <img src="Page 1 Pictures/fbicon.png" class="fbicon" alt="FB Icon">
+    <img src="Page 1 Pictures/watchnow.png" class="watchnow" alt="Watch Now">
+  </section>
+
+</main>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>

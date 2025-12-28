@@ -19,6 +19,10 @@
   "logo": "https://bethelchurch.site/philippine_bethelites_emblem.png"
 }
 </script>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
 </head>
 <body>
 
@@ -86,6 +90,12 @@
     const eventDate = new Date("September 13, 2025 13:00:00").getTime();
     startCountdown(eventDate);
   </script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>

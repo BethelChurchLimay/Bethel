@@ -21,6 +21,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Norwester&display=swap" rel="stylesheet">
 </script>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
 </head>
 <body>
 
@@ -140,6 +144,12 @@
       <a href="https://www.youtube.com/yourchannel" target="_blank"><i class="fa-brands fa-square-youtube"></i></a>
     </div>
   </footer>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>

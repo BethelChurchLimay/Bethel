@@ -6,6 +6,10 @@
   <title>Offering | Bethel Church</title>
   <link rel="stylesheet" href="offering.css" />
   <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png" />
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
 </head>
 <body>
 
@@ -55,6 +59,12 @@
   </div>
 
 <script type="module" src="offering.js"></script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>

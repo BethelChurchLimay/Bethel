@@ -15,6 +15,10 @@
   "logo": "https://bethelchurch.site/philippine_bethelites_emblem.png"
 }
 </script>
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+
 </head>
 <body>
 
@@ -41,6 +45,12 @@
     <img src="philippine_bethelites_emblem.png" alt="Small Emblem" class="bottom-logo" />
     <p class="caption">PHILIPPINE BETHELITES ASSEMBLIES OF GOD INC.</p>
   </div>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>
