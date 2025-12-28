@@ -317,7 +317,7 @@ h1, h2, p {
 /* PHONE DISPLAY */
 /* PHONE DISPLAY */
 /* PHONE DISPLAY */
-@media (max-height: 768px) {
+@media (max-width: 599px) and (min-height: 480px) {
 
 /* ==========================
    RESET STYLES
