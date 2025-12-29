@@ -1,166 +1,209 @@
-/* Reset */
-* {
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: url('Page 3 Pictures/enrollment_background.png') no-repeat center center fixed  ;
-  color: white;
-  height: 100vh;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-image: url('./Page 3 Pictures/equippedbg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* HEADER */
+.header {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 20px 0;
 }
 
-.enroll_header img {
-  max-height: 180px;
-  width: auto;
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+.equipped-header {
+  width: 600px; /* adjust freely */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* scale only */
 }
 
+.equipped-header:hover {
+  transform: scale(1.05); /* optional */
+}
+
+/* MAIN CONTENT */
+.main-content {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 200px); /* header + footer space */
+}
+
+/* LCL ICON & TEXT */
 .lclogo {
   position: absolute;
-  z-index: 1000;
-  top: 250px;
-  left: 500px;
-  text-align: center;
-  flex: 1;
-  min-width: 180px;
-  transition: transform 0.2s ease;
-}
-
-.lclogo:hover {
-  transform: scale(1.1);
-}
-
-.lclogo img {
-  width: auto;
+  top: 100px;  /* adjust vertical */
+  left: 180px; /* adjust horizontal */
+  width: 350px; /* adjust size */
   height: auto;
-  max-width: 300px;
-  max-height: auto;
 }
 
-.lclogo p {
-  font-size: 80px;
-  color: rgb(255, 255, 255);
+.lctxt {
   position: absolute;
-  left: -10px;
-  white-space: nowrap;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-} 
-
-.destinylogo {
-  position: absolute;
-  z-index: 1000;
-  top: 250px;
-  right: 500px;
-  text-align: center;
-  flex: 1;
-  min-width: 180px;
-  transition: transform 0.2s ease;
-}
-
-.destinylogo:hover {
-  transform: scale(1.1);
-}
-
-.destinylogo img {
-  width: auto;
+  top: 450px;  /* below lclogo */
+  left: 180px;
+  width: 350px;
   height: auto;
-  max-width: 300px;
-  max-height: auto;
 }
 
-.destinylogo p {
-  font-size: 80px;
-  color: rgb(255, 255, 255);
+/* DT ICON & TEXT */
+.dtlogo {
   position: absolute;
-  right: -160px;
-  white-space: nowrap;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-} 
-
-.emblem {
-    max-width: 100px; /* Adjusted for smaller screens first */
-    height: auto;
+  top: 100px;
+  left: 800px; /* adjust horizontal */
+  width: 350px;
+  height: auto;
 }
 
-.bottom-section {
-    font-size: 0.75rem; /* Adjusted for smaller screens first */
-    color: rgb(0, 0, 0);
-    margin: 0;
-    text-align: center;
-    padding: 0 10px;
-    position: absolute;
-    top: 750px;
+.dttxt {
+  position: absolute;
+  top: 450px;
+  left: 760px;
+  width: 450px;
+  height: auto;
 }
 
-@media (max-height: 768px) {
-body {
-  background: url("Page 3 Pictures/enrollment_background.png") no-repeat center center;
-  background-size: cover;   /* makes image cover the entire screen */
-  width: 100%;
-  height: 100vh;            /* full viewport height */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start; /* content starts from the top */
-  padding-top: 100px;          /* adjust so logo + content don’t overlap top */
-  color: white;
-  position: relative;
+/* HOMI ICON & TEXT */
+.homilogo {
+  position: absolute;
+  top: 60px;
+  right: 120px;
+  width: 400px;
+  height: auto;
 }
 
-    .enroll_header img {
-        position: center;
-        max-height: 100px;
-        top: 20px;
-        left: 190px;
-    }
+.homitxt {
+  position: absolute;
+  top: 470px;
+  right: 60px;
+  width: 500px;
+  height: auto;
+}
 
-    .lclogo {
-        top: 160px;
-        left: 100px;
-    }
+/* HOVER BUTTONS (scale only) */
+.hover-btn img {
+  transition: transform 0.25s ease;
+}
 
-    .lclogo img {
-        max-width: 160px;
-    }
+.hover-btn:hover img {
+  transform: scale(1.05);
+}
 
-    .lclogo p {
-        font-size: 40px;
-        position: absolute;
-        left: 10px;
-    }
+/* FOOTER ICON & TEXT */
+.pbagicon {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-60px);
+  width: 100px;
+  height: auto;
+}
 
-    .destinylogo {
-        position: absolute;
-        top: 400px;
-        left: 100px;
-    }
+.pbagtxt {
+  position: absolute;
+  bottom: 20px;
+  left: 600px;
+  transform: translateX(10px);
+  width: 700px;
+  height: auto;
+}
 
-    .destinylogo img {
-        max-width: 160px;
-    }
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
+/* PHONE DISPLAY */
 
-    .destinylogo p {
-        font-size: 40px;
-        position: absolute;
-        left: 10px;
-    }
+@media (max-width: 768px) {
+.equipped-header {
+  width: 350px; /* adjust freely */
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* scale only */
+}
+  /* LCL ICON & TEXT */
+.lclogo {
+  position: absolute;
+  top: -10px;  /* adjust vertical */
+  left: 120px; /* adjust horizontal */
+  width: 180px; /* adjust size */
+  height: auto;
+}
 
-    .emblem {
-        max-width: 70px;
-    }
+.lctxt {
+  position: absolute;
+  top: 170px;  /* below lclogo */
+  left: 120px;
+  width: 180px;
+  height: auto;
+}
 
-    .bottom-section {
-        font-size: 0.6rem;
-        top: 630px;
-    }
+/* DT ICON & TEXT */
+.dtlogo {
+  position: absolute;
+  top: 250px;
+  left: 120px; /* adjust horizontal */
+  width: 180px;
+  height: auto;
+}
+
+.dttxt {
+  position: absolute;
+  top: 420px;
+  left: 100px;
+  width: 220px;
+  height: auto;
+}
+
+/* HOMI ICON & TEXT */
+.homilogo {
+  position: absolute;
+  top: 460px;
+  left: 120px;
+  width: 180px;
+  height: auto;
+}
+
+.homitxt {
+  position: absolute;
+  top: 630px;
+  left: 100px;
+  width: 220px;
+  height: auto;
+}
+
+/* HOVER BUTTONS (scale only) */
+.hover-btn img {
+  transition: transform 0.25s ease;
+}
+
+.hover-btn:hover img {
+  transform: scale(1.05);
+}
+
+/* FOOTER ICON & TEXT */
+.pbagicon {
+  position: absolute;
+  bottom: 50px;
+  left: 240px;
+  transform: translateX(-60px);
+  width: 60px;
+  height: auto;
+}
+
+.pbagtxt {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  transform: translateX(10px);
+  width: 400px;
+  height: auto;
+}
 }

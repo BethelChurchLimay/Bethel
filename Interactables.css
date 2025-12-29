@@ -5,8 +5,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    min-height: 100vh; /* Ensure body takes full viewport height */
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 .full-page-background {
@@ -24,7 +24,7 @@ body {
     padding: 30px 15px;
     box-sizing: border-box;
 
-    position: relative; /* Allows absolutely positioned children */
+    position: relative;
 }
     
 .full-page-background {
@@ -231,55 +231,7 @@ h1 {
 /* PHONE DISPLAY */
 /* PHONE DISPLAY */
 
-@media (max-width: 647px) {
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-    min-height: 100vh; /* Ensure body takes full viewport height */
-}
-
-.full-page-background {
-    margin: 0;
-    min-height: 100vh;
-    width: 100vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-
-    color: white;
-    padding: 30px 15px;
-    box-sizing: border-box;
-
-    position: relative; /* Allows absolutely positioned children */
-}
-
-.full-page-background {
-  position: relative;
-  overflow: hidden;
-  background-color: #000;
-}
-
-/* The two overlay backgrounds */
-.bg-slide {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  z-index: 0; /* Behind your content */
-}
-
-/* The visible slide */
-.bg-slide.visible {
-  opacity: 1;
-}
-
+@media (max-width: 767px) {
 /* Logo at the top */
 .bethel-logo {
     max-width: 1000px;
@@ -295,20 +247,6 @@ body {
     z-index: 3;
 }
 
-/* Main title */
-h1 {
-    font-size: 1.2rem; /* Adjusted for smaller screens first */
-    font-weight: 700;
-    margin-bottom: 20px;
-    color: white;
-    padding: 0 10px;
-    max-width: 90%;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    line-height: 1.1; /* Improve readability for multi-line titles */
-}
-
 /* Row of buttons at the top */
     .button-row-top {
         flex-wrap: wrap;
@@ -316,21 +254,6 @@ h1 {
         gap: 12px;
         right: 0; /* remove offset */
     }
-
-/* Each button section */
-.update-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 1; /* Allows items to shrink */
-    flex-grow: 1; /* Allows items to grow */
-    flex-basis: 0; /* Distributes space more evenly when growing/shrinking */
-    min-width: 90px; /* A more absolute minimum width for very small screens */
-    box-sizing: border-box;
-    padding: 3px;   
-   
-}
 
 /* Icon above each button */
 .icon {
@@ -341,17 +264,139 @@ h1 {
     margin-bottom: 0px;
 }
 
-/* Button styles */
+.btn {
+    display: none;
+}
+
+.subtext {
+    font-size: 9px;
+    white-space: nowrap;
+    line-height: 1.4;
+    color: white;
+    margin-top: 2px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    text-align: center;
+}
+
+.emblem {
+    max-width: 70px;
+    height: auto;
+}
+}
+
+/* TABLET DISPLAY */
+/* TABLET DISPLAY */
+/* TABLET DISPLAY */
+@media (min-width: 768px) and (max-width: 1023px) {
+/* Logo at the top */
+.bethel-logo {
+    max-width: 1000px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 300px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+}
+
+/* Row of buttons at the top */
+    .button-row-top {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        right: 0; /* remove offset */
+    }
+
+/* Icon above each button */
+.icon {
+    max-width: 80px; /* Adjusted for smaller screens first */
+    border-radius: 10px;
+    height: auto;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.btn {
+    display: none;
+}
+
+.subtext {
+    font-size: 9px;
+    white-space: nowrap;
+    line-height: 1.4;
+    color: white;
+    margin-top: 2px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90%;
+    text-align: center;
+}
+
+.emblem {
+    max-width: 70px;
+    height: auto;
+}
+}
+
+/* LAPTOP DISPLAY */
+/* LAPTOP DISPLAY */
+/* LAPTOP DISPLAY */
+@media (min-width: 1024px) and (max-width: 1440px) {
+/* Logo at the top */
+.bethel-logo {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+}
+
+/* Row of buttons at the top */
+    .button-row-top {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        right: 0; /* remove offset */
+    }
+
+/* Icon above each button */
+.icon {
+    max-width: 200px; /* Adjusted for smaller screens first */
+    border-radius: 40px;
+    height: auto;
+    display: block;
+    margin-bottom: 0px;
+}
+
 .btn {
     position: relative;
-    width: 3rem; /* Adjusted for smaller screens first */
-    height: 0.5rem; /* Adjusted for smaller screens first */
+    margin-top: 10px;
+    width: 9rem; /* Adjusted for smaller screens first */
+    height: 2.5rem; /* Adjusted for smaller screens first */
     border: none;
     border-radius: 2rem;
     cursor: pointer;
     background-color: white;
-    font-size: 0.1rem; /* Adjusted for smaller screens first */
-    font-weight: 600;
+    font-size: 0.85rem; /* Adjusted for smaller screens first */
+    font-weight: 600;   
     color: white; /* Changed to white as per your new style */
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 0.5px;
@@ -365,30 +410,15 @@ h1 {
     justify-content: center;
     align-items: center;
     text-decoration: none; /*no underline*/
-    display: none;
 }
 
-.btn::before {
-    content: none; /* Keep this if you don't use pseudo-elements for effects */
-
-}
-
-/* Button hover effect */
-.btn:hover {
-    background-color: rgb(197, 0, 79); /* Use the border color for hover background */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    color: white; /* Keep text white on hover */
-}
-
-/* Text under each button */
 .subtext {
     font-size: 9px;
     white-space: nowrap;
     line-height: 1.4;
     color: white;
     margin-top: 2px;
-    min-height: auto; /* Adjusted for smaller screens first */
+    min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -397,36 +427,8 @@ h1 {
     text-align: center;
 }
 
-/* Bottom section (footer) */
-.bottom-section {
-    margin-top: auto; /* Pushes content to the bottom */
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    z-index: 2;
-    position: relative;
-}
-
-/* Remove underline from links inside button row */
-.button-row-top a {
-    text-decoration: none;
-}
-
-/* Small emblem/logo in footer */
 .emblem {
-    max-width: 70px; /* Adjusted for smaller screens first */
+    max-width: 70px;
     height: auto;
 }
-
-.bottom-section p {
-    font-size: 0.75rem; /* Adjusted for smaller screens first */
-    color: white;
-    margin: 0;
-    text-align: center;
-    padding: 0 10px;
-}
-
 }

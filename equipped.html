@@ -5,43 +5,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Equipped | Bethel Church</title>
   <link rel="stylesheet" href="equipped.css">
-
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
 </head>
 <body>
 
-<div class="enroll_header">
-  <a href="Interactables.html">
-  <img src="Page 3 Pictures/engage_header.png" alt="Engage Header">
-</div>
-</a>
+  <!-- HEADER -->
+  <header class="header">
+    <a href="Interactables.html" class="hover-btn">
+      <img src="./Page 3 Pictures/equippedheader.png" alt="Equipped Header" class="equipped-header">
+    </a>
+  </header>
 
-<a href="lcpage.html">
-<div class="lclogo">
-  <img src="Page 3 Pictures/lc_logo.png" alt="Lifeclass Logo">
-  <p>LIFE CLASS</p>
-</div>
-</a>
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
 
-<a href="destinypage.html">
-<div class="destinylogo">
-  <img src="Page 3 Pictures/destiny_logo.png" alt="Destiny Logo">
-  <p>DESTINY TRAINING</p  >
-</div>
-</a>
+    <!-- ICON GROUP -->
+    <div class="icon-group">
 
-<div class="bottom-section">
-  <img src="philippine_bethelites_emblem.png" alt="Philippine Bethelites Emblem" class="emblem"> 
-    <p>PHILIPPINE BETHELITES ASSEMBLIES OF GOD INC.</p>
-</div>
+      <!-- LC -->
+      <a href="lcpage.html" class="hover-btn">
+        <div class="icon-wrapper">
+          <img src="./Page 3 Pictures/lclogo.png" alt="LC Logo" class="lclogo">
+          <img src="./Page 3 Pictures/lctxt.png" alt="LC Text" class="lctxt">
+        </div>
+      </a>
 
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
-  }
-</script>
+      <!-- DT -->
+      <a href="destinypage.html" class="hover-btn">
+        <div class="icon-wrapper">
+          <img src="./Page 3 Pictures/dtlogo.png" alt="DT Logo" class="dtlogo">
+          <img src="./Page 3 Pictures/dttxt.png" alt="DT Text" class="dttxt">
+        </div>
+      </a>
+
+      <!-- HOMILETICS -->
+      <a href="homileticspage.html" class="hover-btn">
+        <div class="icon-wrapper">
+          <img src="./Page 3 Pictures/homilogo.png" alt="HOMI Logo" class="homilogo">
+          <img src="./Page 3 Pictures/homitxt.png" alt="HOMI Text" class="homitxt">
+        </div>
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="./Page 3 Pictures/pbagicon.png" alt="PBag Icon" class="pbagicon">
+    <img src="./Page 3 Pictures/pbagtxt.png" alt="PBag Text" class="pbagtxt">
+  </footer>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
 
 </body>
 </html>

@@ -24,7 +24,7 @@ body {
 }
 
 .header-left .pbag-logo {
-  height: 80px;
+  height: 150px;
 }
 
 .header-left .pbag-logo {
@@ -44,7 +44,7 @@ body {
 }
 
 .header-right i {
-  font-size: 35px;
+  font-size: 100px;
   color: black;
   transition: transform 0.2s ease, color 0.2s ease;
 }
@@ -88,4 +88,23 @@ body {
 .event-date {
   font-size: 20px;
   color: gray;
+}
+
+
+@media (max-width: 768px) {
+  .header-right i {
+    font-size: 40px;
+  }
+
+  .header-left .pbag-logo {
+    height: 80px;
+  }
+
+  .event-highlight h1 {
+    font-size: 35px;
+  }
+
+  .countdown {
+    font-size: 24px;
+  }
 }

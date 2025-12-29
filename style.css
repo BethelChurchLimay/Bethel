@@ -108,73 +108,16 @@ html, body {
   letter-spacing: 1px;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
 
-/* Medium Screens (Tablets & Small Laptops) */
-@media screen and (max-width: 1024px) {
-  .main-logo {
-    width: 700px;
-  }
-  .yellow-outline-button {
-    width: 12rem;
-    height: 3.5rem;
-    font-size: 1.3rem;
-  }
-  .button-container {
-    bottom: 150px;
-  }
-}
-
-/* Small Screens (Large Phones) */
-@media screen and (max-width: 768px) {
-  .main-logo {
-    width: 500px;
-  }
-  .yellow-outline-button {
-    width: 11rem;
-    height: 3.2rem;
-    font-size: 1.2rem;
-  }
-  .button-container {
-    bottom: 120px;
-  }
-  .bottom-logo {
-    width: 60px;
-  }
-  .caption {
-    font-size: 12px;
-  }
-}
-
-/* Extra Small Screens (Phones) */
-@media screen and (max-width: 480px) {
-  .main-logo {
-    width: 300px;
-  }
-  .yellow-outline-button {
-    width: 9rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-  .button-container {
-    bottom: 100px;
-  }
-  .bottom-logo {
-    width: 50px;
-  }
-  .caption {
-    font-size: 11px;
-  }
-}
-
-@media (max-height: 768px) {
+@media (max-width: 768px) {
 /* Button Container */
-.button-container {
-  position: absolute;
-  bottom: 225px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+@media (max-width: 768px) {
+  .button-container {
+    position: absolute;
+    bottom: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Button styles */

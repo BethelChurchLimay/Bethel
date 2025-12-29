@@ -6,10 +6,8 @@
   <title>Live | Bethel Church</title>
   <link rel="stylesheet" href="live.css" />
   <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png" />
-
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
 </head>
 <body>
 
@@ -22,21 +20,47 @@
     </div>
   </header>
 
-  <!-- FACEBOOK -->
-  <facebook class="content">
-  <section class="left-section">
-    <img src="Page 1 Pictures/fbprofile.png" class="fbprofile" alt="FB Profile">
-    <img src="Page 1 Pictures/fbicon.png" class="fbicon" alt="FB Icon">
-    <img src="Page 1 Pictures/watchnow.png" class="watchnow" alt="Watch Now">
-  </section>
+  <!-- MAIN CONTENT -->
+  <main class="page-grid">
 
-</main>
+    <!-- TOP LEFT -->
+    <div class="section top-left">
+      <img src="./Page 1 Pictures/fbprofile.png" class="fbprofile" alt="FB Profile">
+    </div>
 
-<script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("service-worker.js");
-  }
-</script>
+    <!-- TOP RIGHT -->
+    <div class="section top-right">
+      <img src="./Page 1 Pictures/fbicon.png" class="fbicon" alt="FB Icon">
+      <img src="./Page 1 Pictures/fbtxt.png" class="fbtxt" alt="FB Text">
+      <a href="https://www.facebook.com/BethelChurchLimayOfficial/videos/856878837205304" class="hover-btn">
+        <img src="./Page 1 Pictures/watchnow.png" class="watchnow" alt="Watch Now">
+      </a>
+    </div>
+
+    <!-- BOTTOM LEFT -->
+    <div class="section bottom-left">
+      <img src="./Page 1 Pictures/gmeeticon.png" class="gmeeticon" alt="GMeet Icon">
+      <img src="./Page 1 Pictures/gmeetlink.png" class="gmeetlink" alt="GMeet Link">
+      <a href="https://meet.google.com/vpd-mcxv-ecu" class="hover-btn" target="_blank">
+        <img src="./Page 1 Pictures/gmeetcode.png" class="gmeetcode" alt="GMeet Code">
+      </a>
+    </div>
+
+    <!-- BOTTOM RIGHT -->
+    <div class="section bottom-right">
+      <img src="./Page 1 Pictures/yticon.png" class="yticon" alt="YT Icon">
+      <a href="https://youtube.com/@bethelchurchlimay?si=6Z0XNgkzo2l0lCJ0" class="hover-btn">
+        <img src="./Page 1 Pictures/subscribe.png" class="subscribe" alt="Subscribe">
+      </a>
+    </div>
+
+  </main>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
 
 </body>
 </html>

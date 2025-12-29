@@ -1,11 +1,15 @@
-html {
-  scroll-behavior: smooth;
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 body {
-  margin: 0;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: rgb(255, 255, 255);
+  background-image: url('./Page 1 Pictures/page1bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* HEADER */
@@ -24,53 +28,187 @@ body {
 
 .logo {
   width: 200px;
-  height: auto;
-  cursor: pointer; /* Makes it obvious it's clickable */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-.logo {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
-    cursor: pointer; /* show pointer on hover */
-}
-
-/* Hover effect */
 .logo:hover {
-    transform: scale(1.1); /* make it slightly bigger */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 
-.blackHeader a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* MAIN GRID */
+.page-grid {
+  height: calc(100vh - 100px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: relative; /* for absolute positioning of children if needed */
 }
 
-.content {
-  display: flex;
-}
-
-.left-section {
-  width: 40%;
+/* COMMON SECTION STYLES */
+.section {
   padding: 20px;
+  position: relative; /* allow absolute positioning inside sections */
 }
 
+/* HOVER BUTTONS */
+.hover-btn img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.hover-btn img:hover {
+  transform: scale(1.1);
+}
+
+/* ===== TOP LEFT ===== */
 .fbprofile {
-  width: 100%;
-  margin-bottom: 15px;
+  position: absolute; /* free to position */
+  top: 20px;
+  left: 20px;
+  width: 800px; /* adjust as needed */
+  height: auto;
 }
 
+/* ===== TOP RIGHT ===== */
 .fbicon {
-  width: 20%;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  position: relative;
-  left: 60px;
+  position: absolute;
+  top: 160px;
+  right: 650px;
+  width: 250px; /* adjust size */
+  height: auto;
+}
+
+.fbtxt {
+  position: absolute;
+  top: 120px; /* adjust vertical position */
+  right: 80px;
+  width: 500px; /* adjust size */
+  height: auto;
 }
 
 .watchnow {
-  width: 60%;
-  margin-left: auto;
-  position: relative;
-  bottom: 20px;
-  left: 90px;
+  position: absolute;
+  top: 300px; /* adjust vertical position */
+  right: 100px;
+  width: 500px; /* adjust size */
+  height: auto;
+}
+
+/* ===== BOTTOM LEFT ===== */
+.gmeeticon {
+  position: absolute;
+  bottom: 200px;
+  left: 130px;
+  width: 600px;
+  height: auto;
+}
+
+.gmeetlink {
+  position: absolute;
+  bottom: 150px;
+  left: 200px;
+  width: 400px;
+  height: auto;
+}
+
+.gmeetcode {
+  position: absolute;
+  bottom: 40px;
+  left: 150px;
+  width: 500px;
+  height: auto;
+}
+
+/* ===== BOTTOM RIGHT ===== */
+.yticon {
+  position: absolute;
+  bottom: 150px;
+  right: 630px;
+  width: 300px;
+  height: auto;
+}
+
+.subscribe {
+  position: absolute;
+  bottom: 180px;
+  right: 100px;
+  width: 500px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  /* ===== TOP LEFT ===== */
+.fbprofile {
+  position: absolute; /* free to position */
+  top: 20px;
+  left: 10px;
+  width: 400px; /* adjust as needed */
+  height: auto;
+}
+
+/* ===== TOP RIGHT ===== */
+.fbicon {
+  position: absolute;
+  top: 320px;
+  right: 260px;
+  width: 100px; /* adjust size */
+  height: auto;
+}
+
+.fbtxt {
+display: none;
+}
+
+.watchnow {
+  position: absolute;
+  top: 345px; /* adjust vertical position */
+  right: 50px;
+  width: 200px; /* adjust size */
+  height: auto; 
+}
+
+/* ===== BOTTOM LEFT ===== */
+.gmeeticon {
+  position: absolute;
+  bottom: 150px;
+  left: 25px;
+  width: 380px;
+  height: auto;
+}
+
+.gmeetlink {
+  position: absolute;
+  bottom: 100px;
+  left: 60px;
+  width: 300px;
+  height: auto;
+}
+
+.gmeetcode {
+  position: absolute;
+  bottom: 50px;
+  left: 60px;
+  width: 300px;
+  height: auto;
+}
+
+/* ===== BOTTOM RIGHT ===== */
+.yticon {
+  position: absolute;
+  bottom: 300px;
+  right: 265px;
+  width: 100px;
+  height: auto;
+}
+
+.subscribe {
+  position: absolute;
+  bottom: 305px;
+  right: 50px;
+  width: 200px;
+  height: auto;
+}
+
 }
