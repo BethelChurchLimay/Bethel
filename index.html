@@ -33,6 +33,13 @@
     <img src="bethel_logo.png" alt="Main Logo" class="main-logo" />
   </div>
 
+  <!-- Mobile Install Button -->
+<div class="install-button-container">
+  <button id="installBtn" class="yellow-outline-button install-btn">
+    INSTALL BETHEL APP
+  </button>
+</div>
+
   <!-- Ruby Button at Bottom Center -->
   <div class="button-container">
     <a href="Interactables.html" class="button-link"> <!-- Added class="button-link" here -->
@@ -50,6 +57,27 @@
   if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js");
   }
+</script>
+
+<script>
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
+
+  // Listen for the PWA install prompt event
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();  // Prevent automatic prompt
+    deferredPrompt = e;  // Save event for later
+    installBtn.style.display = 'flex'; // Show the button
+  });
+
+  // Handle button click
+  installBtn.addEventListener('click', async () => {
+    if (!deferredPrompt) return;  // Safety check
+    deferredPrompt.prompt();       // Show PWA install prompt
+    const choiceResult = await deferredPrompt.userChoice;
+    deferredPrompt = null;        // Clear the saved prompt
+    installBtn.style.display = 'none'; // Hide button after install or dismissal
+  });
 </script>
 
 </body>

@@ -108,52 +108,41 @@ html, body {
   letter-spacing: 1px;
 }
 
+.install-button-container {
+  display: none;
+}
 
-@media (max-width: 768px) {
-/* Button Container */
 @media (max-width: 768px) {
   .button-container {
     position: absolute;
-    bottom: 300px;
+    bottom: calc(30dvh + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
   }
-}
+   .install-button-container {
+    display: flex;         /* Show only on mobile */
+    position: absolute;
+    top: 18dvh;            /* upper middle */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
 
-/* Button styles */
-.yellow-outline-button {
-  position: relative;
-  width: 15rem;
-  height: 4rem;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-  background-color: transparent;
-  font-size: 1.50rem;
-  font-weight: 600;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease, box-shadow 0.3s ease;
-  padding: 0 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(255, 255, 0, 0.8);
-  white-space: nowrap;
-  border: 2px solid rgb(255, 251, 0);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .install-btn {
+    width: 14rem;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
 
-.button-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Button hover effect */
-.yellow-outline-button:hover {
-  background-color: rgb(255, 251, 0);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 0 30px rgba(255, 255, 0, 1);
-  color: white;
-}
+  .install-btn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
 }
