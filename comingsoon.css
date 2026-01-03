@@ -1,0 +1,164 @@
+#pcbg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#phonebg {
+display: none;
+}
+
+h1 {
+position: relative;
+justify-content: center;
+top: 150px;
+font-family: 'Poppins', sans-serif;
+  font-size: 13rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+h1 :hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* Button Container */
+.button-container {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Button styles */
+.green-outline-button {
+  position: relative;
+  bottom: -4rem;
+  width: 50rem;
+  height: 10rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 5rem;
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(14, 180, 23, 0.8);
+  white-space: nowrap;
+  border: 2px solid rgb(14, 212, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button hover effect */
+.yellow-outline-button:hover {
+  background-color: rgb(0, 255, 8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 0 30px rgb(14, 113, 9);
+  color: white;
+}
+
+/* Right Footer */
+.footer-right {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  position: fixed;
+  right: 0px;
+  top: 480px;
+}
+
+.footer-right i {
+  font-size: 100px;
+  color: black;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-right i:hover {
+  transform: scale(1.2);
+  color: gray;
+}    
+
+@media (max-width: 768px) {
+#pcbg {
+display:none
+}
+
+#phonebg {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+h1 {
+position: relative;
+justify-content: center;
+top: 150px;
+font-family: 'Poppins', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 
+    0 2px 10px rgba(0, 0, 0, 0.5),
+    0 4px 20px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* Button styles */
+.green-outline-button {
+  position: relative;
+  bottom: -4rem;
+  width: 10rem;
+  height: 5rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  background-color: transparent;
+  font-size: 2rem;
+  font-weight: 600;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 20px rgba(14, 180, 23, 0.8);
+  white-space: nowrap;
+  border: 2px solid rgb(14, 212, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+}

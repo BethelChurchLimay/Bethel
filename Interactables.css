@@ -6,17 +6,17 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .full-page-background {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 100vw;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
@@ -51,16 +51,13 @@ body {
 
 /* Logo at the top */
 .bethel-logo {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    display: block;
-    margin-left: 50px;
-    margin-right: auto;
-    text-align: left;
-    position: relative;
-    z-index: 3;
+  max-width: min(600px, 90vw);
+  width: 100%;
+  height: auto;
+  margin: 1.5rem auto 1rem 4vw;
+  display: block;
+  position: relative;
+  z-index: 3;
 }
 
 /* Main title */
@@ -92,7 +89,6 @@ h1 {
     box-sizing: border-box;
     z-index: 2;
     position: relative;
-    right: 62px;  
     text-decoration: none;
 
 }
@@ -233,19 +229,9 @@ h1 {
 
 @media (max-width: 767px) {
 /* Logo at the top */
-.bethel-logo {
-    max-width: 1000px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: 300px;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
-    text-align: left;
-    position: relative;
-    z-index: 3;
-}
+  .bethel-logo {
+    margin-top: 2rem;
+  }
 
 /* Row of buttons at the top */
     .button-row-top {
@@ -294,19 +280,9 @@ h1 {
 /* TABLET DISPLAY */
 @media (min-width: 768px) and (max-width: 1023px) {
 /* Logo at the top */
-.bethel-logo {
-    max-width: 1000px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: 300px;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
-    text-align: left;
-    position: relative;
-    z-index: 3;
-}
+  .bethel-logo {
+    margin-top: 2rem;
+  }
 
 /* Row of buttons at the top */
     .button-row-top {

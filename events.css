@@ -34,8 +34,7 @@ body {
 
 /* Hover effect */
 .header-left .pbag-logo:hover {
-    transform: scale(1.1); /* make it slightly bigger */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
+    transform: scale(1.1); 
 }
 
 .header-right {

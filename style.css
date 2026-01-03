@@ -78,6 +78,11 @@ html, body {
   color: inherit;
 }
 
+.countdown {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Button hover effect */
 .yellow-outline-button:hover {
   background-color: rgb(255, 251, 0);
@@ -107,10 +112,30 @@ html, body {
   font-size: 14px;
   letter-spacing: 1px;
 }
-
 .install-button-container {
-  display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 6rem;
 }
+  .install-btn {
+    width: 18rem;
+    height: 3.5rem;
+    font-size: 1.1rem;
+    border: 2px solid white;
+    color: white;
+    background-color: transparent;
+    border-radius: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+
+  .install-btn:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
 
 @media (max-width: 768px) {
   .button-container {
@@ -126,18 +151,6 @@ html, body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 2;
-  }
-
-  .install-btn {
-    width: 14rem;
-    height: 3.5rem;
-    font-size: 1.1rem;
-    border: 2px solid white;
-    color: white;
-    background-color: transparent;
-    border-radius: 2rem;
-    cursor: pointer;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
   }
 
   .install-btn:hover {

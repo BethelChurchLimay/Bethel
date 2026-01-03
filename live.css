@@ -7,9 +7,13 @@ html, body {
 body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: url('./Page 1 Pictures/page1bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
 }
 
 /* HEADER */

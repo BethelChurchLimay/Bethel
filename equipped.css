@@ -122,60 +122,72 @@ body {
 /* PHONE DISPLAY */
 
 @media (max-width: 768px) {
+  body {
+  background-image: url('./Page 3 Pictures/equippedbg.png');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+
+  }
+
 .equipped-header {
-  width: 350px; /* adjust freely */
+  width: 20rem; /* adjust freely */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease; /* scale only */
 }
   /* LCL ICON & TEXT */
 .lclogo {
-  position: absolute;
-  top: -10px;  /* adjust vertical */
-  left: 120px; /* adjust horizontal */
-  width: 180px; /* adjust size */
+  position: relative;
+  top: -1rem;  /* adjust vertical */
+  left: 8em; /* adjust horizontal */
+  max-width: 6rem; /* adjust size */
   height: auto;
 }
 
 .lctxt {
-  position: absolute;
-  top: 170px;  /* below lclogo */
-  left: 120px;
-  width: 180px;
+  position: relative;
+  top: 1.5rem;  /* below lclogo */
+  left: 1rem;
+  max-width: 8rem;
   height: auto;
 }
 
 /* DT ICON & TEXT */
 .dtlogo {
-  position: absolute;
-  top: 250px;
-  left: 120px; /* adjust horizontal */
-  width: 180px;
+  position: relative;
+  top: 2rem;
+  left: 8rem; /* adjust horizontal */
+  max-width: 6rem;
   height: auto;
 }
 
 .dttxt {
-  position: absolute;
-  top: 420px;
-  left: 100px;
-  width: 220px;
+  position: relative;
+  top: 3.7rem;
+  left: 0.5rem;
+  max-width: 9rem;
   height: auto;
 }
 
 /* HOMI ICON & TEXT */
 .homilogo {
-  position: absolute;
-  top: 460px;
-  left: 120px;
-  width: 180px;
+  position: relative;
+  top: 3rem;
+  left: 7rem;
+  max-width: 8rem;
   height: auto;
 }
 
 .homitxt {
-  position: absolute;
-  top: 630px;
-  left: 100px;
-  width: 220px;
+  position: relative;
+  top: 4rem;
+  left: -3rem;
+  width: 12rem;
   height: auto;
 }
 
@@ -190,20 +202,18 @@ body {
 
 /* FOOTER ICON & TEXT */
 .pbagicon {
-  position: absolute;
-  bottom: 50px;
-  left: 240px;
-  transform: translateX(-60px);
-  width: 60px;
+  position: relative;
+  bottom: 9rem;
+  left: 13rem;
+  max-width: 4rem;
   height: auto;
 }
 
 .pbagtxt {
-  position: absolute;
-  bottom: 20px;
-  left: 10px;
-  transform: translateX(10px);
-  width: 400px;
+  position: relative;
+  bottom: 8rem;
+  left: -1rem;
+  max-width: 16rem;
   height: auto;
 }
 }
