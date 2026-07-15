@@ -43,15 +43,15 @@ body {
   position: absolute;
   top: 100px;  /* adjust vertical */
   left: 180px; /* adjust horizontal */
-  width: 350px; /* adjust size */
+  width: 200px; /* adjust size */
   height: auto;
 }
 
 .lctxt {
   position: absolute;
-  top: 450px;  /* below lclogo */
+  top: 300px;  /* below lclogo */
   left: 180px;
-  width: 350px;
+  width: 200px;
   height: auto;
 }
 
@@ -60,32 +60,32 @@ body {
   position: absolute;
   top: 100px;
   left: 800px; /* adjust horizontal */
-  width: 350px;
+  width: 200px;
   height: auto;
 }
 
 .dttxt {
   position: absolute;
-  top: 450px;
+  top: 300px;
   left: 760px;
-  width: 450px;
+  width: 300px;
   height: auto;
 }
 
 /* HOMI ICON & TEXT */
 .homilogo {
   position: absolute;
-  top: 60px;
-  right: 120px;
-  width: 400px;
+  top: 80px;
+  right: 280px;
+  width: 250px;
   height: auto;
 }
 
 .homitxt {
   position: absolute;
-  top: 470px;
-  right: 60px;
-  width: 500px;
+  top: 350px;
+  right: 250px;
+  width: 300px;
   height: auto;
 }
 
