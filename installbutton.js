@@ -2,17 +2,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const installBtn = document.getElementById("installBtn");
   if (!installBtn) return;
 
-  installBtn.style.display = "none";
+  // Button stays visible at all times now (no hiding by default)
   let deferredPrompt;
 
   window.addEventListener("beforeinstallprompt", (e) => {
     e.preventDefault();
     deferredPrompt = e;
-    installBtn.style.display = "block";
+    console.log("Install is available — beforeinstallprompt fired");
   });
 
   installBtn.addEventListener("click", async () => {
-    if (!deferredPrompt) return;
+    if (!deferredPrompt) {
+      // No install prompt available — either already installed,
+      // unsupported browser (e.g. Safari/iOS), or criteria not met yet
+      alert("This app can be installed from your browser's menu (e.g. 'Add to Home Screen').");
+      return;
+    }
     try {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
@@ -21,12 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Install prompt failed:", err);
     } finally {
       deferredPrompt = null;
-      installBtn.style.display = "none";
     }
   });
 
   window.addEventListener("appinstalled", () => {
-    installBtn.style.display = "none";
+    console.log("App was installed");
     deferredPrompt = null;
   });
 });
