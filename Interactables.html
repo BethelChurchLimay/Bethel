@@ -4,87 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+
     <link rel="stylesheet" href="Interactables.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-            <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png">
-      <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://bethelchurch.site",
-  "logo": "https://bethelchurch.site/philippine_bethelites_emblem.png"
-}
-</script>
+    <link rel="icon" href="philippine_bethelites_emblem.png" type="image/png">
 
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://bethelchurch.site",
+      "logo": "https://bethelchurch.site/philippine_bethelites_emblem.png"
+    }
+    </script>
 
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000000">
 </head>
-<body>
-    <script src="Interactables.js"></script>
-   <div class="full-page-background">
-  <div class="bg-slide bg-slide-1"></div>
-  <div class="bg-slide bg-slide-2"></div>
-        <img src="bethel_logo.png" alt="Bethel Logo" class="bethel-logo"> 
 
-        <div class="button-row-top">
-            <div class="update-section">
-                <a href="live.html">
+<body>
+
+<script src="Interactables.js"></script>
+
+<div class="full-page-background">
+
+    <div class="bg-slide bg-slide-1"></div>
+    <div class="bg-slide bg-slide-2"></div>
+
+    <img src="bethel_logo.png" alt="Bethel Logo" class="bethel-logo">
+
+    <div class="button-row-top">
+
+        <div class="update-section">
+            <a href="live.html">
                 <img src="Interactables Pictures/engage_logo.png" alt="Engage Icon" class="icon">
                 <button class="btn">BE ENGAGE</button>
-                </a>
-                <div class="subtext">
-                    WATCH LIVESTREAMS
-                </div>
+            </a>
+            <div class="subtext">
+                WATCH LIVESTREAMS
             </div>
-            <div class="update-section">
-                <a href="family.html">
+        </div>
+
+        <div class="update-section">
+            <a href="family.html">
                 <img src="Interactables Pictures/family_logo.png" alt="Family Icon" class="icon">
                 <button class="btn">BE FAMILY</button>
-                </a>
-                <div class="subtext">
-                    KNOW THE CHURCH
-                </div>
+            </a>
+            <div class="subtext">
+                KNOW THE CHURCH
             </div>
-            <div class="update-section">
-                <a href="events.html">
+        </div>
+
+        <div class="update-section">
+            <a href="events.html">
                 <img src="Interactables Pictures/updated_logo.png" alt="Updated Icon" class="icon">
                 <button class="btn">BE UPDATED</button>
-                </a>
-                <div class="subtext">
-                   CHECK EVENTS
-                </div>
+            </a>
+            <div class="subtext">
+                CHECK EVENTS
             </div>
-            <div class="update-section">
-                <a href="offering.html">
+        </div>
+
+        <div class="update-section">
+            <a href="offering.html">
                 <img src="Interactables Pictures/supporter_logo.png" alt="Supporter Icon" class="icon">
                 <button class="btn">BE A SUPPORTER</button>
-                </a>
-                <div class="subtext">
-                    TITHES & OFFERINGS
-                </div>
-            </div>
-            <div class="update-section">
-                <a href="equipped.html">
-                <img src="Interactables Pictures/equipped_logo.png" alt="Megaphone Icon" class="icon">
-                <button class="btn">BE EQUIPPED</button>
-                </a>
-                <div class="subtext">
-                   ENROLL TO TRAININGS
-                </div>
+            </a>
+            <div class="subtext">
+                TITHES & OFFERINGS
             </div>
         </div>
 
-        <div class="bottom-section">
-            <img src="philippine_bethelites_emblem.png" alt="Philippine Bethelites Emblem" class="emblem"> 
-            <p>PHILIPPINE BETHELITES ASSEMBLIES OF GOD INC.</p>
+        <div class="update-section">
+            <a href="equipped.html">
+                <img src="Interactables Pictures/equipped_logo.png" alt="Equipped Icon" class="icon">
+                <button class="btn">BE EQUIPPED</button>
+            </a>
+            <div class="subtext">
+                ENROLL TO TRAININGS
+            </div>
         </div>
+
+        <!-- NEW PRAY BOX -->
+        <div class="update-section">
+            <a href="pray.html">
+                <img src="Interactables Pictures/pray_logo.png" alt="Pray Icon" class="icon">
+                <button class="btn">BE FAITHFUL</button>
+            </a>
+            <div class="subtext">
+                ENGAGE TO PRAY
+            </div>
+        </div>
+
     </div>
 
+    <div class="bottom-section">
+        <img src="philippine_bethelites_emblem.png" alt="Philippine Bethelites Emblem" class="emblem">
+        <p>PHILIPPINE BETHELITES ASSEMBLIES OF GOD INC.</p>
+    </div>
+
+</div>
+
 <script>
-  if ("serviceWorker" in navigator) {
+if ("serviceWorker" in navigator) {
     navigator.serviceWorker.register("service-worker.js");
-  }
+}
 </script>
 
 </body>

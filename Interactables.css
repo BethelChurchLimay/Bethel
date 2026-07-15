@@ -1,410 +1,160 @@
 /* interactables.css */
 
-/* Basic styles for the whole page */
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    min-height: 100dvh;
+/* Basic styles */
+body{
+    font-family:'Montserrat',sans-serif;
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    min-height:100dvh;
 }
 
-.full-page-background {
-    margin: 0;
-    min-height: 100dvh;
-    width: 100vw;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-
-    color: white;
-    padding: 30px 15px;
-    box-sizing: border-box;
-
-    position: relative;
-}
-    
-.full-page-background {
-  position: relative;
-  overflow: hidden;
-  background-color: #000;
+.full-page-background{
+    position:relative;
+    overflow:hidden;
+    background:#000;
+    min-height:100dvh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    color:#fff;
+    text-align:center;
+    padding:30px 15px;
+    box-sizing:border-box;
 }
 
-/* The two overlay backgrounds */
-.bg-slide {
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
-  z-index: 0; /* Behind your content */
+.bg-slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+    opacity:0;
+    transition:opacity 1s ease;
+    z-index:0;
+}
+.bg-slide.visible{opacity:1;}
+
+.bethel-logo{
+    position:relative;
+    z-index:2;
+    width:min(600px,90vw);
+    margin:20px auto 20px 10px;
+    align-self:flex-start;
 }
 
-/* The visible slide */
-.bg-slide.visible {
-  opacity: 1;
+.button-row-top{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:1600px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:28px;
+    justify-items:center;
+    align-items:start;
+    margin:auto 0;
+    padding:0 20px;
+    box-sizing:border-box;
 }
 
-/* Logo at the top */
-.bethel-logo {
-  max-width: min(600px, 90vw);
-  width: 100%;
-  height: auto;
-  margin: 1.5rem auto 1rem 4vw;
-  display: block;
-  position: relative;
-  z-index: 3;
+.update-section{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:100%;
+    max-width:210px;
 }
 
-/* Main title */
-h1 {
-    font-size: 1.6rem; /* Adjusted for smaller screens first */
-    font-weight: 700;
-    margin-bottom: 30px;
-    color: white;
-    padding: 0 10px;
-    max-width: 90%;
-    text-align: center;
-    z-index: 2;
-    position: relative;
-    line-height: 1.2; /* Improve readability for multi-line titles */
+.update-section a{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    text-decoration:none;
 }
 
-/* Row of buttons at the top */
-.button-row-top {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap; /* As per your original intention */
-    justify-content: space-around;
-    align-items: flex-start;
-    gap: 180px;
-    margin-bottom: auto; /* Pushes content to the bottom */
-    width: 100%;
-    max-width: 1300px;
-    padding: 0 5px;
-    box-sizing: border-box;
-    z-index: 2;
-    position: relative;
-    text-decoration: none;
-
+.icon{
+    width:100%;
+    max-width:200px;
+    border-radius:40px;
+    transition:.3s;
+    cursor:pointer;
+}
+.icon:hover{
+    transform:scale(1.08);
+    box-shadow:0 8px 15px rgba(0,0,0,.3);
 }
 
-/* Each button section */
-.update-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    flex-shrink: 1; /* Allows items to shrink */
-    flex-grow: 1; /* Allows items to grow */
-    flex-basis: 0; /* Distributes space more evenly when growing/shrinking */
-    min-width: 120px; /* A more absolute minimum width for very small screens */
-    box-sizing: border-box;
-    padding: 5px;   
-   
+.btn{
+    margin-top:10px;
+    width:9rem;
+    height:2.5rem;
+    border-radius:2rem;
+    background:transparent;
+    border:2px solid rgb(197,0,79);
+    color:#fff;
+    font:600 .85rem 'Montserrat',sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    transition:.3s;
+}
+.btn:hover{
+    background:rgb(197,0,79);
+    transform:translateY(-2px);
 }
 
-/* Icon above each button */
-.icon {
-    max-width: 280px; /* Adjusted for smaller screens first */
-    border-radius: 50px;
-    height: auto;
-    display: block;
-    margin-bottom: 5px;
+.subtext{
+    margin-top:8px;
+    font-size:.8rem;
+    text-align:center;
+    line-height:1.35;
+    min-height:40px;
 }
 
-.icon {
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth effect */
-    cursor: pointer; /* show pointer on hover */
+.bottom-section{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    padding-bottom:20px;
 }
 
-/* Hover effect */
-.icon:hover {
-    transform: scale(1.1); /* make it slightly bigger */
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3); /* optional shadow */
-}
+.emblem{max-width:70px;}
+.bottom-section p{font-size:.75rem;margin:0;}
 
-.update-section a {
-    display: flex;
-    flex-direction: column; /* stack icon + button vertically */
-    align-items: center;    /* center horizontally */
-    text-decoration: none;  /* remove underline */
-}
-
-/* Button styles */
-.btn {
-    position: relative;
-    margin-top: 10px;
-    width: 9rem; /* Adjusted for smaller screens first */
-    height: 2.5rem; /* Adjusted for smaller screens first */
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    background-color: white;
-    font-size: 0.85rem; /* Adjusted for smaller screens first */
-    font-weight: 600;   
-    color: white; /* Changed to white as per your new style */
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    padding: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
-    background: transparent;
-    border: 2px solid rgb(197, 0, 79);
-    display: flex; /* Use flex to center text vertically if needed */
-    justify-content: center;
-    align-items: center;
-    text-decoration: none; /*no underline*/
-}
-
-.btn::before {
-    content: none; /* Keep this if you don't use pseudo-elements for effects */
-
-}
-
-/* Button hover effect */
-.btn:hover {
-    background-color: rgb(197, 0, 79); /* Use the border color for hover background */
-    transform: translateY(-2px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-    color: white; /* Keep text white on hover */
-}
-
-/* Text under each button */
-.subtext {
-    font-size: clamp(0.6rem, 2vw, 0.9rem);
-    white-space: nowrap;
-    line-height: 1.4;
-    color: white;
-    margin-top: 5px;
-    min-height: 60px; /* Adjusted for smaller screens first */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
-    text-align: center;
-}
-
-/* Bottom section (footer) */
-.bottom-section {
-    margin-top: auto; /* Pushes content to the bottom */
-    padding-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    width: 100%;
-    z-index: 2;
-    position: relative;
-}
-
-/* Remove underline from links inside button row */
-.button-row-top a {
-    text-decoration: none;
-}
-
-/* Small emblem/logo in footer */
-.emblem {
-    max-width: 70px; /* Adjusted for smaller screens first */
-    height: auto;
-}
-
-.bottom-section p {
-    font-size: 0.75rem; /* Adjusted for smaller screens first */
-    color: white;
-    margin: 0;
-    text-align: center;
-    padding: 0 10px;
-}
-
-/* PHONE DISPLAY */
-/* PHONE DISPLAY */
-/* PHONE DISPLAY */
-
-@media (max-width: 767px) {
-/* Logo at the top */
-  .bethel-logo {
-    margin-top: 2rem;
-  }
-
-/* Row of buttons at the top */
-    .button-row-top {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        right: 0; /* remove offset */
+@media (max-width:1023px){
+    .bethel-logo{
+        margin:25px auto;
+        align-self:center;
     }
 
-/* Icon above each button */
-.icon {
-    max-width: 80px; /* Adjusted for smaller screens first */
-    border-radius: 10px;
-    height: auto;
-    display: block;
-    margin-bottom: 0px;
-}
-
-.btn {
-    display: none;
-}
-
-.subtext {
-    font-size: 9px;
-    white-space: nowrap;
-    line-height: 1.4;
-    color: white;
-    margin-top: 2px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
-    text-align: center;
-}
-
-.emblem {
-    max-width: 70px;
-    height: auto;
-}
-}
-
-/* TABLET DISPLAY */
-/* TABLET DISPLAY */
-/* TABLET DISPLAY */
-@media (min-width: 768px) and (max-width: 1023px) {
-/* Logo at the top */
-  .bethel-logo {
-    margin-top: 2rem;
-  }
-
-/* Row of buttons at the top */
-    .button-row-top {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        right: 0; /* remove offset */
+    .button-row-top{
+        grid-template-columns:repeat(3,minmax(100px,1fr));
+        gap:16px;
     }
 
-/* Icon above each button */
-.icon {
-    max-width: 80px; /* Adjusted for smaller screens first */
-    border-radius: 10px;
-    height: auto;
-    display: block;
-    margin-bottom: 0px;
-}
-
-.btn {
-    display: none;
-}
-
-.subtext {
-    font-size: 9px;
-    white-space: nowrap;
-    line-height: 1.4;
-    color: white;
-    margin-top: 2px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
-    text-align: center;
-}
-
-.emblem {
-    max-width: 70px;
-    height: auto;
-}
-}
-
-/* LAPTOP DISPLAY */
-/* LAPTOP DISPLAY */
-/* LAPTOP DISPLAY */
-@media (min-width: 1024px) and (max-width: 1440px) {
-/* Logo at the top */
-.bethel-logo {
-    max-width: 600px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    display: block;
-    margin-left: 10px;
-    margin-right: auto;
-    text-align: left;
-    position: relative;
-    z-index: 3;
-}
-
-/* Row of buttons at the top */
-    .button-row-top {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-        right: 0; /* remove offset */
+    .icon{
+        max-width:90px;
+        border-radius:12px;
     }
 
-/* Icon above each button */
-.icon {
-    max-width: 200px; /* Adjusted for smaller screens first */
-    border-radius: 40px;
-    height: auto;
-    display: block;
-    margin-bottom: 0px;
+    .btn{
+        display:none;
+    }
+
+    .subtext{
+        font-size:9px;
+        min-height:auto;
+    }
 }
 
-.btn {
-    position: relative;
-    margin-top: 10px;
-    width: 9rem; /* Adjusted for smaller screens first */
-    height: 2.5rem; /* Adjusted for smaller screens first */
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    background-color: white;
-    font-size: 0.85rem; /* Adjusted for smaller screens first */
-    font-weight: 600;   
-    color: white; /* Changed to white as per your new style */
-    font-family: 'Montserrat', sans-serif;
-    letter-spacing: 0.5px;
-    transition: all 0.3s ease;
-    padding: 0 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
-    background: transparent;
-    border: 2px solid rgb(197, 0, 79);
-    display: flex; /* Use flex to center text vertically if needed */
-    justify-content: center;
-    align-items: center;
-    text-decoration: none; /*no underline*/
-}
-
-.subtext {
-    font-size: 9px;
-    white-space: nowrap;
-    line-height: 1.4;
-    color: white;
-    margin-top: 2px;
-    min-height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 90%;
-    text-align: center;
-}
-
-.emblem {
-    max-width: 70px;
-    height: auto;
-}
+@media (max-width:600px){
+    .button-row-top{
+        grid-template-columns:repeat(2,minmax(100px,1fr));
+    }
 }
